@@ -2,6 +2,6 @@
 # bash script for Linux and Mac
 # chmod u+x acp
 # source acp "commit message"
-git add .
+git add.
 git commit -m "$1"
 git push
