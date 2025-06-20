@@ -142,30 +142,54 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">七、Tutorial5 的挑戰題目有哪些？如何著手解決？ << <a href='七、Tutorial5 的挑戰題目有哪些？如何著手解決？.html'>Previous</a> <a href='九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用.html'>Next</a> >> 九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用<br /><h1>八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？</h1>
-必要功能：
-<ul data-end="1954" data-start="1843">
-<li data-end="1857" data-start="1843">
-<p data-end="1857" data-start="1845"><strong data-end="1857" data-start="1845">路線循跡（巡線）</strong></p>
+    <div id="tipue_search_content">Tutorial6 相關提問: << <a href='Tutorial6 相關提問:.html'>Previous</a> <a href='例：.html'>Next</a> >> 例：<br /><h1>Python 範例：</h1>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">camera = robot.getDevice('camera')<br/>camera.enable(timestep) # 啟用攝影機並設定更新頻率</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"></div>
+</div>
+<hr data-end="411" data-start="408"/>
+<br/>三、<strong data-end="438" data-start="418">如何取得攝影機擷取到的影像資料？</strong>
+<p data-end="470" data-start="440">可使用下列方法取得像素資料（為 raw bytes 格式）：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">image = camera.getImage()<br/>width = camera.getWidth()<br/>height = camera.getHeight()</div>
+</div>
+</div>
+</div>
+<p data-end="593" data-start="567">你可以使用 Webots 的圖像處理 API，例如：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">r = Camera.imageGetRed(image, width, x, y)<br/>g = Camera.imageGetGreen(image, width, x, y)<br/>b = Camera.imageGetBlue(image, width, x, y)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span></span></code></div>
+</div>
+<hr data-end="778" data-start="775"/>
+<br/>四、<strong data-end="818" data-start="785">Tutorial6 中，機器人如何依據攝影機影像做出反應？</strong>
+<p data-end="837" data-start="820">在 Tutorial6，機器人會：</p>
+<ul data-end="902" data-start="839">
+<li data-end="867" data-start="839">
+<p data-end="867" data-start="841">使用攝影機偵測畫面中是否出現 <strong data-end="867" data-start="856">特定顏色的物體</strong></p>
 </li>
-<li data-end="1872" data-start="1858">
-<p data-end="1872" data-start="1860"><strong data-end="1872" data-start="1860">障礙物偵測與避障</strong></p>
-</li>
-<li data-end="1888" data-start="1873">
-<p data-end="1888" data-start="1875"><strong data-end="1888" data-start="1875">區域辨識與轉向控制</strong></p>
-</li>
-<li data-end="1904" data-start="1889">
-<p data-end="1904" data-start="1891"><strong data-end="1904" data-start="1891">狀態管理（FSM）</strong></p>
-</li>
-<li data-end="1928" data-start="1905">
-<p data-end="1928" data-start="1907"><strong data-end="1928" data-start="1907">導航記憶（若需回到原點或重覆路徑）</strong></p>
-</li>
-<li data-end="1954" data-start="1929">
-<p data-end="1954" data-start="1931">（進階）<strong data-end="1954" data-start="1935">路線地圖構建、SLAM、里程計</strong></p>
+<li data-end="902" data-start="868">
+<p data-end="902" data-start="870">透過簡單的像素分析，若偵測到某顏色，就執行動作（例如轉向、停止）</p>
 </li>
 </ul>
-<hr data-end="1959" data-start="1956"/>
-<br />七、Tutorial5 的挑戰題目有哪些？如何著手解決？ << <a href='七、Tutorial5 的挑戰題目有哪些？如何著手解決？.html'>Previous</a> <a href='九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用.html'>Next</a> >> 九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用</div>
+<br />Tutorial6 相關提問: << <a href='Tutorial6 相關提問:.html'>Previous</a> <a href='例：.html'>Next</a> >> 例：</div>
         
     <!-- footer -->
       <div class="container">

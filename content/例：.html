@@ -142,30 +142,152 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">七、Tutorial5 的挑戰題目有哪些？如何著手解決？ << <a href='七、Tutorial5 的挑戰題目有哪些？如何著手解決？.html'>Previous</a> <a href='九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用.html'>Next</a> >> 九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用<br /><h1>八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？</h1>
-必要功能：
-<ul data-end="1954" data-start="1843">
-<li data-end="1857" data-start="1843">
-<p data-end="1857" data-start="1845"><strong data-end="1857" data-start="1845">路線循跡（巡線）</strong></p>
-</li>
-<li data-end="1872" data-start="1858">
-<p data-end="1872" data-start="1860"><strong data-end="1872" data-start="1860">障礙物偵測與避障</strong></p>
-</li>
-<li data-end="1888" data-start="1873">
-<p data-end="1888" data-start="1875"><strong data-end="1888" data-start="1875">區域辨識與轉向控制</strong></p>
-</li>
-<li data-end="1904" data-start="1889">
-<p data-end="1904" data-start="1891"><strong data-end="1904" data-start="1891">狀態管理（FSM）</strong></p>
-</li>
-<li data-end="1928" data-start="1905">
-<p data-end="1928" data-start="1907"><strong data-end="1928" data-start="1907">導航記憶（若需回到原點或重覆路徑）</strong></p>
-</li>
-<li data-end="1954" data-start="1929">
-<p data-end="1954" data-start="1931">（進階）<strong data-end="1954" data-start="1935">路線地圖構建、SLAM、里程計</strong></p>
+    <div id="tipue_search_content">Python 範例： << <a href='Python 範例：.html'>Previous</a> <a href='✅ 總結：攝影機應用流程建議.html'>Next</a> >> ✅ 總結：攝影機應用流程建議<br /><h1>例：</h1>
+<p data-end="935" data-start="911">如果畫面中心的像素呈紅色，則機器人轉向紅色物體。</p>
+<hr data-end="940" data-start="937"/>
+<br/>五、<strong data-end="969" data-start="947">Camera 裝置可以調整哪些參數？</strong>
+<p data-end="986" data-start="971">可在機器人設定中調整以下參數：</p>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="1341" data-start="988">
+<thead data-end="1039" data-start="988">
+<tr data-end="1039" data-start="988">
+<th data-col-size="sm" data-end="1005" data-start="988">參數名稱</th>
+<th data-col-size="sm" data-end="1039" data-start="1005">功能</th>
+</tr>
+</thead>
+<tbody data-end="1341" data-start="1098">
+<tr data-end="1149" data-start="1098">
+<td data-col-size="sm" data-end="1119" data-start="1098"><code data-end="1107" data-start="1100">width</code>, <code data-end="1117" data-start="1109">height</code></td>
+<td data-col-size="sm" data-end="1149" data-start="1119">攝影機解析度</td>
+</tr>
+<tr data-end="1201" data-start="1150">
+<td data-col-size="sm" data-end="1171" data-start="1150"><code data-end="1165" data-start="1152">fieldOfView</code></td>
+<td data-col-size="sm" data-end="1201" data-start="1171">視野角度（FOV）</td>
+</tr>
+<tr data-end="1244" data-start="1202">
+<td data-col-size="sm" data-end="1223" data-start="1202"><code data-end="1210" data-start="1204">near</code>, <code data-end="1217" data-start="1212">far</code></td>
+<td data-col-size="sm" data-end="1244" data-start="1223">近 / 遠裁剪面（剪除畫面以外區域）</td>
+</tr>
+<tr data-end="1294" data-start="1245">
+<td data-col-size="sm" data-end="1266" data-start="1245"><code data-end="1259" data-start="1247">motionBlur</code></td>
+<td data-col-size="sm" data-end="1294" data-start="1266">是否模擬動態模糊</td>
+</tr>
+<tr data-end="1341" data-start="1295">
+<td data-col-size="sm" data-end="1316" data-start="1295"><code data-end="1311" data-start="1297">antiAliasing</code></td>
+<td data-col-size="sm" data-end="1341" data-start="1316">抗鋸齒處理（改善畫質）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr data-end="1346" data-start="1343"/>
+<br/>六、<strong data-end="1375" data-start="1353">影像解析度的設定會對模擬有什麼影響？</strong>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="1492" data-start="1377">
+<thead data-end="1392" data-start="1377">
+<tr data-end="1392" data-start="1377">
+<th data-col-size="sm" data-end="1384" data-start="1377">解析度高</th>
+<th data-col-size="sm" data-end="1392" data-start="1384">解析度低</th>
+</tr>
+</thead>
+<tbody data-end="1492" data-start="1417">
+<tr data-end="1436" data-start="1417">
+<td data-col-size="sm" data-end="1428" data-start="1417">更清晰、細節更多</td>
+<td data-col-size="sm" data-end="1436" data-start="1428">畫質粗糙</td>
+</tr>
+<tr data-end="1458" data-start="1437">
+<td data-col-size="sm" data-end="1447" data-start="1437">影像處理更準確</td>
+<td data-col-size="sm" data-end="1458" data-start="1447">難以辨識小物體</td>
+</tr>
+<tr data-end="1492" data-start="1459">
+<td data-col-size="sm" data-end="1477" data-start="1459">會<strong data-end="1476" data-start="1462">增加計算量與模擬延遲</strong></td>
+<td data-col-size="sm" data-end="1492" data-start="1477">效能較佳，適合快速模擬</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p data-end="1524" data-start="1494">建議依照應用需求（例如只辨認顏色不需高解析）選擇合適解析度。</p>
+<hr data-end="1529" data-start="1526"/>
+<br/>七、<strong data-end="1555" data-start="1536">如何將攝影機影像儲存成圖片檔？</strong>
+<p data-end="1574" data-start="1557">可使用 Webots 提供的方法：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">camera.saveImage("image.png", quality)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<ul data-end="1662" data-start="1630">
+<li data-end="1662" data-start="1630">
+<p data-end="1662" data-start="1632"><code data-end="1641" data-start="1632">quality</code>：介於 1 到 100，代表影像壓縮品質。</p>
 </li>
 </ul>
-<hr data-end="1959" data-start="1956"/>
-<br />七、Tutorial5 的挑戰題目有哪些？如何著手解決？ << <a href='七、Tutorial5 的挑戰題目有哪些？如何著手解決？.html'>Previous</a> <a href='九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用.html'>Next</a> >> 九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用</div>
+<p data-end="1669" data-start="1664">完整例子：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">camera.saveImage("snapshot.png", 100)</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>camera.saveImage(<span class="hljs-string">"snapshot.png"</span>, <span class="hljs-number">100</span>) </span></code></div>
+</div>
+<p data-end="1740" data-start="1723">也可結合 OpenCV 寫入圖片：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">import numpy as np<br/>import cv2<br/><br/>image = camera.getImage()<br/>width = camera.getWidth()<br/>height = camera.getHeight()<br/>img_array = np.frombuffer(image, np.uint8).reshape((height, width, 4))<br/>bgr_image = cv2.cvtColor(img_array, cv2.COLOR_BGRA2BGR)<br/>cv2.imwrite("snapshot_cv.png", bgr_image)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<hr data-end="2039" data-start="2036"/>
+<br/>八、<strong data-end="2070" data-start="2046">若攝影機影像顯示異常，可能的原因有哪些？</strong>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="2526" data-start="2072">
+<thead data-end="2144" data-start="2072">
+<tr data-end="2144" data-start="2072">
+<th data-col-size="sm" data-end="2098" data-start="2072">問題情形</th>
+<th data-col-size="sm" data-end="2144" data-start="2098">可能原因</th>
+</tr>
+</thead>
+<tbody data-end="2526" data-start="2226">
+<tr data-end="2293" data-start="2226">
+<td data-col-size="sm" data-end="2248" data-start="2226">畫面為黑（全 0 值）</td>
+<td data-col-size="sm" data-end="2293" data-start="2248">沒有 <code data-end="2263" data-start="2253">enable()</code> 或 timestep 設為 0</td>
+</tr>
+<tr data-end="2348" data-start="2294">
+<td data-col-size="sm" data-end="2314" data-start="2294">畫面畫質太差或閃爍</td>
+<td data-col-size="sm" data-end="2348" data-start="2314">解析度太低 / 頻率過低 / 模擬效能不足</td>
+</tr>
+<tr data-end="2409" data-start="2349">
+<td data-col-size="sm" data-end="2369" data-start="2349">顏色異常（如全綠）</td>
+<td data-col-size="sm" data-end="2409" data-start="2369">RGB 通道讀取錯誤，需確認 <code data-end="2401" data-start="2386">imageGetRed()</code> 等使用正確</td>
+</tr>
+<tr data-end="2470" data-start="2410">
+<td data-col-size="sm" data-end="2432" data-start="2410">儲存圖片為空檔</td>
+<td data-col-size="sm" data-end="2470" data-start="2432"><code data-end="2447" data-start="2434">saveImage()</code> 檔名路徑錯誤或沒寫入權限</td>
+</tr>
+<tr data-end="2526" data-start="2471">
+<td data-col-size="sm" data-end="2493" data-start="2471">調用 OpenCV 時轉換錯誤</td>
+<td data-col-size="sm" data-end="2526" data-start="2493">需先轉換成 NumPy 格式、注意通道順序與格式</td>
+</tr>
+</tbody>
+</table>
+<div class="sticky end-(--thread-content-margin) h-0 self-end select-none"></div>
+<div class="sticky end-(--thread-content-margin) h-0 self-end select-none">
+<div class="absolute end-0 flex items-end"></div>
+</div>
+</div>
+</div>
+<br />Python 範例： << <a href='Python 範例：.html'>Previous</a> <a href='✅ 總結：攝影機應用流程建議.html'>Next</a> >> ✅ 總結：攝影機應用流程建議</div>
         
     <!-- footer -->
       <div class="container">
