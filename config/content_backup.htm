@@ -202,7 +202,205 @@
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW2 - 學員學號</p>
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
+<br/>HW1<span>相關提問:</span>
+<h3>Webots 是什麼樣的軟體？它主要用途為何？</h3>
+<p data-end="158" data-start="75">Webots 是一套由 <strong data-end="105" data-start="90">Cyberbotics</strong> 所開發的 <strong data-end="128" data-start="111">開源 3D 機器人模擬軟體</strong>，用於模擬機器人在真實世界中行為的虛擬環境。其主要用途包括：</p>
+<ul data-end="262" data-start="160">
+<li data-end="178" data-start="160">
+<p data-end="178" data-start="162">設計與模擬移動式或靜態機器人系統</p>
+</li>
+<li data-end="211" data-start="179">
+<p data-end="211" data-start="181">測試機器人控制演算法（例如感測器融合、路徑規劃、強化學習等）</p>
+</li>
+<li data-end="236" data-start="212">
+<p data-end="236" data-start="214">教學與研究（機器人學、人工智慧、自主導航等）</p>
+</li>
+<li data-end="262" data-start="237">
+<p data-end="262" data-start="239">開發與驗證機器人軟硬體設計（可搭配真實機器人）</p>
+</li>
+</ul>
+<h3>如何在 Webots 中建立並執行一個新的模擬世界（world）？</h3>
 <p></p>
+<ul>
+<li data-end="339" data-start="322">
+<p data-end="339" data-start="325"><strong data-end="338" data-start="325">啟動 Webots</strong>。</p>
+</li>
+<li data-end="379" data-start="340">
+<p data-end="379" data-start="343">選單中點選 <code data-end="355" data-start="349">File</code> → <code data-end="369" data-start="358">New World</code> 建立新的模擬場景。</p>
+</li>
+<li data-end="477" data-start="380">
+<p data-end="420" data-start="383">可透過左側「場景樹」(Scene Tree) 加入環境物件與機器人，例如：</p>
+<ul data-end="477" data-start="424">
+<li data-end="452" data-start="424">
+<p data-end="452" data-start="426">加入地面：<code data-end="452" data-start="431">Add &gt; Solid &gt; Floor</code></p>
+</li>
+<li data-end="477" data-start="456">
+<p data-end="477" data-start="458">加入機器人：<code data-end="477" data-start="464">Add &gt; Robot</code></p>
+</li>
+</ul>
+</li>
+<li data-end="499" data-start="478">
+<p data-end="499" data-start="481">編輯物件屬性，如大小、材質、位置等。</p>
+</li>
+<li data-end="523" data-start="500">
+<p data-end="523" data-start="503">儲存世界檔案（副檔名為 <code data-end="521" data-start="515">.wbt</code>）。</p>
+</li>
+<li data-end="553" data-start="524">
+<p data-end="553" data-start="527">點選「播放」按鈕（上方工具列 ▶️），即可執行模擬。</p>
+</li>
+</ul>
+<p></p>
+<h3>請簡述 Webots 控制器（controller）的功能及其與機器人的關係。</h3>
+<p></p>
+<ul>
+<li data-end="662" data-start="607">
+<p data-end="662" data-start="609"><strong data-end="616" data-start="609">控制器</strong>是 Webots 中操控機器人行為的程式碼（通常是 C、Python、C++ 等語言撰寫）。</p>
+</li>
+<li data-end="702" data-start="663">
+<p data-end="702" data-start="665">它直接與機器人的感測器與致動器互動（例如讀取紅外線感測器、控制馬達轉速）。</p>
+</li>
+<li data-end="763" data-start="703">
+<p data-end="763" data-start="705">每個控制器程式通常對應一個機器人，可在 <code data-end="732" data-start="725">robot</code> 物件的 <code data-end="749" data-start="737">controller</code> 欄位指定對應的控制器名稱。</p>
+</li>
+<li data-end="825" data-start="764">
+<p data-end="825" data-start="766">控制器執行週期性迴圈（如 <code data-end="814" data-start="779">while robot.step(timestep) != -1:</code>）來模擬真實時間控制。</p>
+</li>
+</ul>
+<p></p>
+<h3>Webots 中的 "Supervisor" 是什麼？它與一般機器人控制器有何不同？</h3>
+<p></p>
+<ul>
+<li data-end="931" data-start="887">
+<p data-end="931" data-start="889"><strong data-end="903" data-start="889">Supervisor</strong> 是一種特殊的控制器，擁有 <strong data-end="930" data-start="917">更高層次的控制權限</strong>。</p>
+</li>
+<li data-end="1036" data-start="932">
+<p data-end="955" data-start="934">除了能像一般控制器一樣控制機器人，它還能：</p>
+<ul data-end="1036" data-start="958">
+<li data-end="978" data-start="958">
+<p data-end="978" data-start="960">修改場景中的物件（新增、刪除、移動）</p>
+</li>
+<li data-end="995" data-start="981">
+<p data-end="995" data-start="983">取得所有物件的位置與狀態</p>
+</li>
+<li data-end="1018" data-start="998">
+<p data-end="1018" data-start="1000">重設模擬、儲存世界狀態、載入新的世界</p>
+</li>
+<li data-end="1036" data-start="1021">
+<p data-end="1036" data-start="1023">用於強化學習（如重置環境）</p>
+</li>
+</ul>
+</li>
+<li data-end="1073" data-start="1037">
+<p data-end="1073" data-start="1039">適用於：<strong data-end="1073" data-start="1043">全局管理、多機器人系統、評分系統、自動測試場景等應用</strong></p>
+</li>
+</ul>
+<p></p>
+<h3>如何將 Webots 世界（world）或機器人設定檔分享給他人，確保對方可順利開啟模擬</h3>
+<ul data-end="1274" data-start="1157">
+<li data-end="1274" data-start="1255">
+<p data-end="1274" data-start="1257">其他依賴檔案（貼圖、模型、資料檔）</p>
+<ul data-end="1274" data-start="1157">
+<li data-end="1182" data-start="1157">
+<p data-end="1182" data-start="1159"><code data-end="1168" data-start="1159">worlds/</code>：模擬場景檔（<code data-end="1181" data-start="1175">.wbt</code>）</p>
+</li>
+<li data-end="1217" data-start="1183">
+<p data-end="1217" data-start="1185"><code data-end="1194" data-start="1185">protos/</code>：自訂機器人或物件的描述檔（<code data-end="1216" data-start="1208">.proto</code>）</p>
+</li>
+<li data-end="1254" data-start="1218">
+<p data-end="1254" data-start="1220"><code data-end="1234" data-start="1220">controllers/</code>：控制器程式碼（每個控制器一個子資料夾）</p>
+</li>
+<li data-end="1274" data-start="1255">
+<p data-end="1274" data-start="1257">其他依賴檔案（貼圖、模型、資料檔）</p>
+</li>
+</ul>
+<p data-end="1281" data-start="1276">打包方式：</p>
+<ol data-end="1385" data-start="1282">
+<li data-end="1317" data-start="1282">
+<p data-end="1317" data-start="1285">使用<span> </span><code data-end="1294" data-start="1288">.zip</code><span> </span>或<span> </span><code data-end="1306" data-start="1297">.tar.gz</code><span> </span>壓縮整個專案資料夾。</p>
+</li>
+<li data-end="1347" data-start="1318">
+<p data-end="1347" data-start="1321">確保分享者與接收者都安裝有相同版本的 Webots。</p>
+</li>
+<li data-end="1385" data-start="1348">
+<p data-end="1385" data-start="1351">接收者只需解壓縮後，透過 Webots 開啟<span> </span><code data-end="1380" data-start="1374">.wbt</code><span> </span>檔即可。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3>Webots 支援哪些主流程控制語言？各有何優缺點？</h3>
+<table class="w-fit min-w-(--thread-content-width)" data-end="1703" data-start="1443">
+<thead data-end="1462" data-start="1443">
+<tr data-end="1462" data-start="1443">
+<th data-col-size="sm" data-end="1451" data-start="1443">語言</th>
+<th data-col-size="sm" data-end="1456" data-start="1451">優點</th>
+<th data-col-size="sm" data-end="1462" data-start="1456">缺點</th>
+</tr>
+</thead>
+<tbody data-end="1703" data-start="1489">
+<tr data-end="1543" data-start="1489">
+<td data-col-size="sm" data-end="1501" data-start="1489"><strong data-end="1500" data-start="1491">C/C++</strong></td>
+<td data-col-size="sm" data-end="1528" data-start="1501">高效能，資源控制佳，適合嵌入式模擬與真實硬體整合</td>
+<td data-col-size="sm" data-end="1543" data-start="1528">開發速度慢、語法較繁瑣</td>
+</tr>
+<tr data-end="1605" data-start="1544">
+<td data-col-size="sm" data-end="1557" data-start="1544"><strong data-end="1556" data-start="1546">Python</strong></td>
+<td data-col-size="sm" data-end="1589" data-start="1557">撰寫快速、易讀、資源豐富（支援 NumPy、PyTorch）</td>
+<td data-col-size="sm" data-end="1605" data-start="1589">效能略低，不適合重度運算</td>
+</tr>
+<tr data-end="1645" data-start="1606">
+<td data-col-size="sm" data-end="1617" data-start="1606"><strong data-end="1616" data-start="1608">Java</strong></td>
+<td data-col-size="sm" data-end="1629" data-start="1617">跨平台佳，結構清晰</td>
+<td data-col-size="sm" data-end="1645" data-start="1629">程式碼稍長、社群支援較少</td>
+</tr>
+<tr data-end="1703" data-start="1646">
+<td data-col-size="sm" data-end="1659" data-start="1646"><strong data-end="1658" data-start="1648">MATLAB</strong></td>
+<td data-col-size="sm" data-end="1675" data-start="1659">適合科學計算與控制理論模擬</td>
+<td data-col-size="sm" data-end="1703" data-start="1675">授權成本高，與 Webots 整合需額外安裝套件</td>
+</tr>
+</tbody>
+</table>
+<h3>請說明如何使用 Webots 的 Console 與 Debug 工具協助程式錯誤排除。</h3>
+<ul data-end="2146" data-start="1784">
+<li data-end="1916" data-start="1784">
+<p data-end="1807" data-start="1786"><strong data-end="1797" data-start="1786">Console</strong>（控制器輸出視窗）：</p>
+<ul data-end="1916" data-start="1810">
+<li data-end="1845" data-start="1810">
+<p data-end="1845" data-start="1812">顯示控制器<span> </span><code data-end="1827" data-start="1818">print()</code><span> </span>或<span> </span><code data-end="1840" data-start="1830">printf()</code><span> </span>的輸出。</p>
+</li>
+<li data-end="1876" data-start="1848">
+<p data-end="1876" data-start="1850">顯示錯誤訊息、例外（Exception）與除錯訊息。</p>
+</li>
+<li data-end="1913" data-start="1879">
+<p data-end="1913" data-start="1881">可使用<span> </span><code data-end="1902" data-start="1885">robot.getName()</code><span> </span>等方法輸出除錯資訊。</p>
+</li>
+</ul>
+</li>
+<li data-end="2079" data-start="1917">
+<p data-end="1948" data-start="1919"><strong data-end="1931" data-start="1919">Debug 工具</strong>（在 IDE 或外部開發工具中）：</p>
+<ul data-end="2079" data-start="1951">
+<li data-end="1996" data-start="1951">
+<p data-end="1996" data-start="1953">可將控制器連結至外部 IDE（如 Visual Studio Code）來設斷點除錯。</p>
+</li>
+<li data-end="2021" data-start="1999">
+<p data-end="2021" data-start="2001">C/C++ 控制器可透過 gdb 除錯。</p>
+</li>
+<li data-end="2079" data-start="2024">
+<p data-end="2079" data-start="2026">Python 控制器可加入<span> </span><code data-end="2069" data-start="2040">import pdb; pdb.set_trace()</code><span> </span>進入互動除錯模式。</p>
+</li>
+</ul>
+</li>
+<li data-end="2146" data-start="2081">
+<p data-end="2103" data-start="2083"><strong data-end="2102" data-start="2083">Supervisor 支援除錯</strong>：</p>
+<ul data-end="2146" data-start="2106">
+<li data-end="2125" data-start="2106">
+<p data-end="2125" data-start="2108">可檢查世界中的物件狀態與位置變化。</p>
+</li>
+<li data-end="2146" data-start="2128">
+<p data-end="2146" data-start="2130">可設定模擬暫停、單步執行等功能。</p>
+</li>
+</ul>
+</li>
+</ul>
 <h1>Midterm</h1>
 <p>本課程所繳交的期中成績為學員自評之學習期望成績.</p>
 <p>期中考週的自評期望成績繳交流程:</p>
@@ -254,6 +452,7 @@
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_mGRPPzDGKA?si=pPwL073tFCeGHMB-" title="YouTube video player" width="560"></iframe></p>
 <p><a href="/downloads/fourbar_slvs.7z">/downloads/fourbar_slvs.7z</a></p>
 <h2>Exam1</h2>
+<p>Exsm1 webots檔案<a href="/downloads/w4.1.7z">/downloads/w4.1.7z</a></p>
 <p>Exam1 (10%): 建立 Webots 基本物件模擬場景</p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam1 - 41223116</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/MnwXI8ChAUM?si=cOlmPazLrOQEFRo_" title="YouTube video player" width="560"></iframe></p>
