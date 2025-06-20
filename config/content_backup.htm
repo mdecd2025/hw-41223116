@@ -1139,7 +1139,7 @@
 </div>
 </div>
 </div>
-<h2 data-end="2550" data-start="2533">✅ 總結：攝影機應用流程建議</h2>
+<h3 data-end="2550" data-start="2533">✅ 總結：攝影機應用流程建議</h3>
 <ol data-end="2728" data-start="2552">
 <li data-end="2584" data-start="2552">
 <p data-end="2584" data-start="2555">在 <code data-end="2563" data-start="2557">.wbt</code> 中確認已為機器人加入 Camera 裝置</p>
@@ -1175,8 +1175,7 @@
 <p data-end="251" data-start="233">判斷是否符合特定顏色範圍（如紅色）。</p>
 </li>
 </ol>
-<hr data-end="256" data-start="253"/>
-<br/>二、<strong data-end="287" data-start="263">如何分析攝影機擷取的影像來辨識特定顏色？</strong>
+<hr data-end="256" data-start="253"/><br/>二、<strong data-end="287" data-start="263">如何分析攝影機擷取的影像來辨識特定顏色？</strong>
 <p data-end="331" data-start="289">最常見方法是將 RGB 影像轉換為 <strong data-end="319" data-start="307">HSV 色彩空間</strong>，可更準確定義顏色範圍。</p>
 <h3 data-end="351" data-start="333">範例（使用 OpenCV）：</h3>
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
@@ -1189,8 +1188,7 @@
 </div>
 </div>
 </div>
-<hr data-end="746" data-start="743"/>
-<br/>三、<strong data-end="795" data-start="753">OpenCV 或其他影像處理函式庫在 Webots 控制器程式中的應用方式？</strong>
+<hr data-end="746" data-start="743"/><br/>三、<strong data-end="795" data-start="753">OpenCV 或其他影像處理函式庫在 Webots 控制器程式中的應用方式？</strong>
 <h3 data-end="804" data-start="797">步驟：</h3>
 <ol data-end="1002" data-start="806">
 <li data-end="868" data-start="806">
@@ -1220,8 +1218,7 @@
 <blockquote data-end="1042" data-start="1004">
 <p data-end="1042" data-start="1006">注意：若使用 C/C++ 則需額外連結 OpenCV 函式庫，較為複雜。</p>
 </blockquote>
-<hr data-end="1047" data-start="1044"/>
-<br/>四、<strong data-end="1078" data-start="1054">如何將影像中的顏色資訊轉換為機器人行為？</strong>
+<hr data-end="1047" data-start="1044"/><br/>四、<strong data-end="1078" data-start="1054">如何將影像中的顏色資訊轉換為機器人行為？</strong>
 <p data-end="1097" data-start="1080">依照物體的顏色與位置，轉換為動作：</p>
 <ul data-end="1132" data-start="1099">
 <li data-end="1132" data-start="1099">
@@ -1238,8 +1235,7 @@
 </div>
 </div>
 </div>
-<hr data-end="1379" data-start="1376"/>
-<br/>五、<strong data-end="1409" data-start="1386">若要辨識多種顏色，程式需考慮哪些步驟？</strong>
+<hr data-end="1379" data-start="1376"/><br/>五、<strong data-end="1409" data-start="1386">若要辨識多種顏色，程式需考慮哪些步驟？</strong>
 <ol data-end="1530" data-start="1411">
 <li data-end="1432" data-start="1411">
 <p data-end="1432" data-start="1414"><strong data-end="1432" data-start="1414">建立每個顏色的 HSV 範圍</strong></p>
@@ -1254,8 +1250,7 @@
 <p data-end="1530" data-start="1508">為每個顏色對應動作（例如紅色靠近，藍色避開）</p>
 </li>
 </ol>
-<hr data-end="1535" data-start="1532"/>
-<br/>六、<strong data-end="1566" data-start="1542">如何解決不同光源下顏色偵測的不穩定問題？</strong>
+<hr data-end="1535" data-start="1532"/><br/>六、<strong data-end="1566" data-start="1542">如何解決不同光源下顏色偵測的不穩定問題？</strong>
 <h3 data-end="1577" data-start="1568">解決方法：</h3>
 <ul data-end="1734" data-start="1579">
 <li data-end="1608" data-start="1579">
@@ -1274,8 +1269,7 @@
 <p data-end="1734" data-start="1715">只偵測畫面中心或固定範圍，降低光源影響</p>
 </li>
 </ul>
-<hr data-end="1739" data-start="1736"/>
-<br/>七、<strong data-end="1773" data-start="1746">e-puck 機器人如何追蹤影像中的顏色物件？</strong>
+<hr data-end="1739" data-start="1736"/><br/>七、<strong data-end="1773" data-start="1746">e-puck 機器人如何追蹤影像中的顏色物件？</strong>
 <ol data-end="1868" data-start="1775">
 <li data-end="1793" data-start="1775">
 <p data-end="1793" data-start="1778">偵測顏色並建立遮罩（mask）</p>
@@ -1297,8 +1291,7 @@
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)<br/>if contours:<br/> largest = max(contours, key=cv2.contourArea)<br/> x, y, w, h = cv2.boundingRect(largest)<br/> cx = x + w // 2<br/> # 控制轉向<br/> if cx &lt; width // 3:<br/> turn_left()<br/> elif cx &gt; width * 2 // 3:<br/> turn_right()<br/> else:<br/> move_forward()</div>
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
 </div>
-<hr data-end="2239" data-start="2236"/>
-<br/>八、<strong data-end="2273" data-start="2246">若影像中有多個同色物件，程式如何選擇追蹤目標？</strong>
+<hr data-end="2239" data-start="2236"/><br/>八、<strong data-end="2273" data-start="2246">若影像中有多個同色物件，程式如何選擇追蹤目標？</strong>
 <p data-end="2283" data-start="2275">可採用以下策略：</p>
 <ul data-end="2399" data-start="2285">
 <li data-end="2308" data-start="2285">
@@ -1314,45 +1307,284 @@
 <p data-end="2399" data-start="2365"><strong data-end="2399" data-start="2365">加入 ID 辨識（進階，可搭配 QR code 或其他特徵）</strong></p>
 </li>
 </ul>
-<hr data-end="2404" data-start="2401"/>
-<br/>九、<strong data-end="2446" data-start="2411">Tutorial7 能否應用於現實世界的機器人？需做哪些調整？</strong>
+<hr data-end="2404" data-start="2401"/><br/>九、<strong data-end="2446" data-start="2411">Tutorial7 能否應用於現實世界的機器人？需做哪些調整？</strong>
 <p data-end="2467" data-start="2448"><strong data-end="2467" data-start="2448">可以，但需進行以下調整與強化：</strong></p>
 <div class="_tableContainer_16hzy_1">
 <div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
 <table class="w-fit min-w-(--thread-content-width)" data-end="2719" data-start="2469">
 <thead data-end="2490" data-start="2469">
 <tr data-end="2490" data-start="2469">
-<th data-col-size="sm" data-end="2474" data-start="2469">項目</th>
-<th data-col-size="sm" data-end="2490" data-start="2474">模擬 → 現實需調整內容</th>
+<th data-col-size="sm" data-end="2474" data-start="2469">
+<h3>項目</h3>
+</th>
+<th data-col-size="sm" data-end="2490" data-start="2474">
+<h3>模擬 → 現實需調整內容</h3>
+</th>
 </tr>
 </thead>
 <tbody data-end="2719" data-start="2525">
 <tr data-end="2553" data-start="2525">
-<td data-col-size="sm" data-end="2533" data-start="2525">感測器輸入</td>
-<td data-col-size="sm" data-end="2553" data-start="2533">攝影機解析度、光照變異大、雜訊多</td>
+<td data-col-size="sm" data-end="2533" data-start="2525">
+<h3>感測器輸入</h3>
+</td>
+<td data-col-size="sm" data-end="2553" data-start="2533">
+<h3>攝影機解析度、光照變異大、雜訊多</h3>
+</td>
 </tr>
 <tr data-end="2582" data-start="2554">
-<td data-col-size="sm" data-end="2561" data-start="2554">計算效能</td>
-<td data-col-size="sm" data-end="2582" data-start="2561">現實中控制器效能受限，需簡化演算法</td>
+<td data-col-size="sm" data-end="2561" data-start="2554">
+<h3>計算效能</h3>
+</td>
+<td data-col-size="sm" data-end="2582" data-start="2561">
+<h3>現實中控制器效能受限，需簡化演算法</h3>
+</td>
 </tr>
 <tr data-end="2612" data-start="2583">
-<td data-col-size="sm" data-end="2591" data-start="2583">光源穩定性</td>
-<td data-col-size="sm" data-end="2612" data-start="2591">增加光學濾光片、白平衡、自適應曝光</td>
+<td data-col-size="sm" data-end="2591" data-start="2583">
+<h3>光源穩定性</h3>
+</td>
+<td data-col-size="sm" data-end="2612" data-start="2591">
+<h3>增加光學濾光片、白平衡、自適應曝光</h3>
+</td>
 </tr>
 <tr data-end="2656" data-start="2613">
-<td data-col-size="sm" data-end="2620" data-start="2613">色彩標準</td>
-<td data-col-size="sm" data-end="2656" data-start="2620">建立實際環境下的顏色校正表（Color Calibration）</td>
+<td data-col-size="sm" data-end="2620" data-start="2613">
+<h3>色彩標準</h3>
+</td>
+<td data-col-size="sm" data-end="2656" data-start="2620">
+<h3>建立實際環境下的顏色校正表（Color Calibration）</h3>
+</td>
 </tr>
 <tr data-end="2689" data-start="2657">
-<td data-col-size="sm" data-end="2664" data-start="2657">馬達控制</td>
-<td data-col-size="sm" data-end="2689" data-start="2664">要控制實體馬達，需加入通訊協定與驅動器程式</td>
+<td data-col-size="sm" data-end="2664" data-start="2657">
+<h3>馬達控制</h3>
+</td>
+<td data-col-size="sm" data-end="2689" data-start="2664">
+<h3>要控制實體馬達，需加入通訊協定與驅動器程式</h3>
+</td>
 </tr>
 <tr data-end="2719" data-start="2690">
-<td data-col-size="sm" data-end="2697" data-start="2690">驗證測試</td>
-<td data-col-size="sm" data-end="2719" data-start="2697">實測不同環境條件、多樣目標距離與角度</td>
+<td data-col-size="sm" data-end="2697" data-start="2690">
+<h3>驗證測試</h3>
+</td>
+<td data-col-size="sm" data-end="2719" data-start="2697">
+<h3>實測不同環境條件、多樣目標距離與角度</h3>
+</td>
 </tr>
 </tbody>
 </table>
+<h3><span>Tutorial8 相關提問</span></h3>
+<h3 data-end="124" data-start="85">一、什麼是 Supervisor？在 Tutorial8 扮演什麼角色？</h3>
+✅ 定義：Supervisor 是 Webots 提供的一種特殊控制器，具有<strong data-end="190" data-start="169">對整個模擬世界進行高層次操控的能力</strong>，包括讀取、改變物體位置、插入/刪除物件、重置場景等。🎯 在 Tutorial8 的角色：
+<ul data-end="320" data-start="243">
+<li data-end="260" data-start="243"><strong data-end="260" data-start="245">監控機器人任務是否成功</strong></li>
+<li data-end="277" data-start="261"><strong data-end="277" data-start="263">判斷是否進入目標區域</strong></li>
+<li data-end="297" data-start="278"><strong data-end="297" data-start="280">重新定位機器人（重置模擬）</strong></li>
+<li data-end="320" data-start="298">擔任「上帝視角」，輔助任務流程或教學實驗</li>
+</ul>
+<hr data-end="325" data-start="322"/>
+<h3 data-end="352" data-start="327">二、Supervisor 可以進行哪些操作？</h3>
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="919" data-start="354">
+<thead data-end="449" data-start="354">
+<tr data-end="449" data-start="354">
+<th data-col-size="sm" data-end="379" data-start="354">功能</th>
+<th data-col-size="sm" data-end="449" data-start="379">說明</th>
+</tr>
+</thead>
+<tbody data-end="919" data-start="550">
+<tr data-end="617" data-start="550">
+<td data-col-size="sm" data-end="568" data-start="550">取得/設定物體位置</td>
+<td data-col-size="sm" data-end="617" data-start="568">可取得機器人或物件的位置、方向，並進行修改</td>
+</tr>
+<tr data-end="688" data-start="618">
+<td data-col-size="sm" data-end="636" data-start="618">插入/移除節點（Node）</td>
+<td data-col-size="sm" data-end="688" data-start="636">可在模擬中動態新增/刪除機器人或其他物件</td>
+</tr>
+<tr data-end="762" data-start="689">
+<td data-col-size="sm" data-end="708" data-start="689">存取其他裝置屬性</td>
+<td data-col-size="sm" data-end="762" data-start="708">可取得感測器讀值、行為狀態、能量等</td>
+</tr>
+<tr data-end="842" data-start="763">
+<td data-col-size="sm" data-end="784" data-start="763">控制模擬流程</td>
+<td data-col-size="sm" data-end="842" data-start="784">如暫停、重設、儲存世界狀態</td>
+</tr>
+<tr data-end="919" data-start="843">
+<td data-col-size="sm" data-end="865" data-start="843">監測與記錄</td>
+<td data-col-size="sm" data-end="919" data-start="865">追蹤目標達成時間、路徑、碰撞等資訊</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr data-end="924" data-start="921"/>
+<h3 data-end="961" data-start="926">三、如何在 Supervisor 控制器中存取並控制其他機器人？</h3>
+<h3 data-end="975" data-start="963">取得機器人節點：</h3>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">robot_node = supervisor.getFromDef("EPUCK")</div>
+</div>
+</div>
+<h3 data-end="1046" data-start="1035">存取位置資訊：</h3>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">translation_field = robot_node.getField("translation")<br/>position = translation_field.getSFVec3f() # 回傳 [x, y, z]</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<h3 data-end="1188" data-start="1175">修改位置（重置）：</h3>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">translation_field.setSFVec3f([0.0, 0.0, 0.0])</div>
+</div>
+</div>
+<p data-end="1306" data-start="1252">注意：物件需在 <code data-end="1266" data-start="1260">.wbt</code> 世界中使用 <code data-end="1278" data-start="1273">DEF</code> 命名，如 <code data-end="1305" data-start="1284">&lt;Robot DEF="EPUCK"&gt;</code>。</p>
+<hr data-end="1311" data-start="1308"/>
+<h3 data-end="1347" data-start="1313">四、如何用 Supervisor 監測機器人是否達到目標區域？</h3>
+<h3 data-end="1369" data-start="1349">檢查機器人位置是否進入特定範圍：</h3>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">x, y, z = position<br/>if target_x1 &lt; x &lt; target_x2 and target_z1 &lt; z &lt; target_z2:<br/> print("目標達成！")</div>
+</div>
+</div>
+<h3 data-end="1514" data-start="1483">也可在場景中設計一個虛擬區塊（如目標色塊），對其進行座標比對。</h3>
+<hr data-end="1519" data-start="1516"/>
+<h3 data-end="1552" data-start="1521">五、Supervisor 如何重設模擬或重置機器人位置？</h3>
+<h3 data-end="1563" data-start="1554">兩種方式：</h3>
+<ol data-end="1582" data-start="1565">
+<li data-end="1582" data-start="1565">
+<h3 data-end="1582" data-start="1568"><strong data-end="1582" data-start="1568">直接設定位置與角度：</strong></h3>
+</li>
+</ol>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">translation_field.setSFVec3f([0.0, 0.0, 0.0])<br/>rotation_field = robot_node.getField("rotation")<br/>rotation_field.setSFRotation([0, 1, 0, 0]) # 預設面向</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<ol data-end="1760" data-start="1744" start="2">
+<li data-end="1760" data-start="1744">
+<h3 data-end="1760" data-start="1747"><strong data-end="1760" data-start="1747">重設整個世界模擬：</strong></h3>
+</li>
+</ol>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+<h3>supervisor.simulationReset()</h3>
+</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>supervisor.simulationReset() </span></code></div>
+<hr data-end="1808" data-start="1805"/>
+<h3 data-end="1846" data-start="1810">六、Supervisor 能否獲取所有物件的座標與狀態？如何實作？</h3>
+<br/>可以，透過 <code data-end="1869" data-start="1858">getRoot()</code> 與 <code data-end="1887" data-start="1872">getChildren()</code> 遍歷場景：
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">root = supervisor.getRoot()<br/>children = root.getField("children")<br/>count = children.getCount()<br/><br/>for i in range(count):<br/> node = children.getMFNode(i)<br/> name = node.getDef()<br/> if node.getTypeName() == "Robot":<br/> pos = node.getField("translation").getSFVec3f()<br/> print(f"{name} 機器人位置：{pos}")</div>
+</div>
+</div>
+<p data-end="2237" data-start="2218">可擴展至判斷多機器人位置、狀態或距離。</p>
+<hr data-end="2242" data-start="2239"/>
+<h3 data-end="2269" data-start="2244">七、如何紀錄機器人模擬過程的數據供日後分析？</h3>
+可用 Supervisor 記錄數據並寫入檔案（如 CSV 或 JSON）：
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">import csv<br/><br/>with open("log.csv", mode="a", newline="") as file:<br/> writer = csv.writer(file)<br/> writer.writerow([time, x, y, z])</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span class="hljs-keyword"></span></span></code>亦可使用 <code data-end="2496" data-start="2462">supervisor.movieStartRecording()</code> 錄製模擬過程為影片。</div>
+<hr data-end="2512" data-start="2509"/>
+<h3 data-end="2547" data-start="2514">八、Supervisor 可以如何協助自動化測試機器人行為？</h3>
+<h3 data-end="2559" data-start="2549">可用來進行：</h3>
+<ul data-end="2658" data-start="2561">
+<li data-end="2574" data-start="2561">
+<h3 data-end="2574" data-start="2563"><strong data-end="2574" data-start="2563">任務完成率統計</strong></h3>
+</li>
+<li data-end="2594" data-start="2575">
+<h3 data-end="2594" data-start="2577"><strong data-end="2594" data-start="2577">多次模擬 → 收集效能資料</strong></h3>
+</li>
+<li data-end="2616" data-start="2595">
+<h3 data-end="2616" data-start="2597"><strong data-end="2616" data-start="2597">自動測試不同初始位置/障礙配置</strong></h3>
+</li>
+<li data-end="2632" data-start="2617">
+<h3 data-end="2632" data-start="2619"><strong data-end="2632" data-start="2619">錯誤復現與回溯記錄</strong></h3>
+</li>
+<li data-end="2658" data-start="2633">
+<h3 data-end="2658" data-start="2635"><strong data-end="2658" data-start="2635">即時干預與調整行為（debug/教學）</strong></h3>
+</li>
+</ul>
+<h3 data-end="2673" data-start="2660">自動測試範例流程：</h3>
+<ol data-end="2731" data-start="2675">
+<li data-end="2682" data-start="2675">
+<h3 data-end="2682" data-start="2678">重置模擬</h3>
+</li>
+<li data-end="2692" data-start="2683">
+<h3 data-end="2692" data-start="2686">指定目標位置</h3>
+</li>
+<li data-end="2702" data-start="2693">
+<h3 data-end="2702" data-start="2696">等待任務完成</h3>
+</li>
+<li data-end="2719" data-start="2703">
+<h3 data-end="2719" data-start="2706">判斷是否成功 → 紀錄結果</h3>
+</li>
+<li data-end="2731" data-start="2720">
+<h3 data-end="2731" data-start="2723">重複多次收集統計</h3>
+</li>
+</ol>
+<hr data-end="2736" data-start="2733"/>
+<h3 data-end="2796" data-start="2738">九、綜合 Tutorial6~8，感知（感測）、決策（控制器）、監督（Supervisor）三者如何協同運作？</h3>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="3244" data-start="2798">
+<thead data-end="2894" data-start="2798">
+<tr data-end="2894" data-start="2798">
+<th data-col-size="sm" data-end="2807" data-start="2798">層次</th>
+<th data-col-size="sm" data-end="2822" data-start="2807">元件</th>
+<th data-col-size="sm" data-end="2894" data-start="2822">功能說明</th>
+</tr>
+</thead>
+<tbody data-end="3244" data-start="3000">
+<tr data-end="3096" data-start="3000">
+<td data-col-size="sm" data-end="3008" data-start="3000">感知層</td>
+<td data-col-size="sm" data-end="3050" data-start="3008">感測器（Camera、DistanceSensor、GroundSensor）</td>
+<td data-col-size="sm" data-end="3096" data-start="3050">擷取外部環境資訊（顏色、距離、地面等）</td>
+</tr>
+<tr data-end="3172" data-start="3097">
+<td data-col-size="sm" data-end="3105" data-start="3097">決策層</td>
+<td data-col-size="sm" data-end="3133" data-start="3105">控制器（Controller）</td>
+<td data-col-size="sm" data-end="3172" data-start="3133">根據感測資料做出即時行為反應（轉向、避障、追蹤等）</td>
+</tr>
+<tr data-end="3244" data-start="3173">
+<td data-col-size="sm" data-end="3181" data-start="3173">監督層</td>
+<td data-col-size="sm" data-end="3210" data-start="3181">Supervisor 控制器</td>
+<td data-col-size="sm" data-end="3244" data-start="3210">管理整體模擬流程、紀錄資訊、確認任務達成、重設環境或任務流程</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 data-end="3260" data-start="3246">🧠 協同運作範例：</h3>
+<ol data-end="3365" data-start="3262">
+<li data-end="3300" data-start="3262">
+<p data-end="3300" data-start="3265">Camera 偵測到紅色 → 控制器控制 e-puck 向紅色物體前進</p>
+</li>
+<li data-end="3330" data-start="3301">
+<p data-end="3330" data-start="3304">Supervisor 判斷機器人是否成功進入紅色區塊</p>
+</li>
+<li data-end="3365" data-start="3331">
+<p data-end="3365" data-start="3334">若失敗，Supervisor 重設模擬重新測試，並記錄每次結果</p>
+</li>
+</ol>
+<p><span> </span></p>
 </div>
 </div>
 <blockquote data-end="2761" data-start="2721"></blockquote>
