@@ -203,7 +203,7 @@
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
 <p><br/><br/><br/><br/></p>
-<br/><br/><br/><span>HW1</span><span>相關提問:</span>
+<p><br/><br/><br/><span>HW1</span><span>相關提問:</span></p>
 <p>Webots 是什麼樣的軟體？它主要用途為何？</p>
 <p data-end="158" data-start="75">Webots 是一套由 <strong data-end="105" data-start="90">Cyberbotics</strong> 所開發的 <strong data-end="128" data-start="111">開源 3D 機器人模擬軟體</strong>，用於模擬機器人在真實世界中行為的虛擬環境。其主要用途包括：</p>
 <ul data-end="262" data-start="160">
@@ -404,10 +404,10 @@
 <p><strong></strong></p>
 <p><br/><br/></p>
 <h2><span>Tutorial3 相關提問:</span></h2>
-<p><br/>1. <strong data-end="96" data-start="79">如何讓機器人偵測地面顏色？</strong></p>
+<br/><br/>1. <strong data-end="96" data-start="79">如何讓機器人偵測地面顏色？</strong>
 <p data-end="187" data-start="98">在 Webots 中，使用地面感測器（<strong data-end="135" data-start="117">Ground Sensors</strong>）來偵測地面顏色或反射率。這些感測器通常裝設在機器人底部，透過模擬的光學反射值來讀取不同顏色的地面資訊。</p>
 <hr data-end="192" data-start="189"/>
-<p><br/>2. <strong data-end="236" data-start="201">Ground Sensors 在 Webots 裡的作用為何？</strong></p>
+<br/><br/>2. <strong data-end="236" data-start="201">Ground Sensors 在 Webots 裡的作用為何？</strong>
 <p data-end="277" data-start="238">Ground Sensors 模擬了現實中的 <strong data-end="271" data-start="261">反射光感測器</strong>，其作用為：</p>
 <ul data-end="337" data-start="279">
 <li data-end="297" data-start="279">
@@ -422,7 +422,7 @@
 </ul>
 <p data-end="361" data-start="339">這些感測器會回傳浮點數值，代表地面反光程度。</p>
 <hr data-end="366" data-start="363"/>
-<p><br/>3. <strong data-end="406" data-start="375">如何在程式中取得 Ground Sensor 的數值？</strong></p>
+<br/><br/>3. <strong data-end="406" data-start="375">如何在程式中取得 Ground Sensor 的數值？</strong>
 <p data-end="424" data-start="408">以 <strong data-end="423" data-start="410">Python 為例</strong>：</p>
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
@@ -437,7 +437,7 @@
 <p data-end="729" data-start="676">注意：常見 e-puck 使用三個地面感測器：<code data-end="704" data-start="699">gs0</code>, <code data-end="711" data-start="706">gs1</code>, <code data-end="718" data-start="713">gs2</code>，分別對應左、中、右。</p>
 </blockquote>
 <hr data-end="734" data-start="731"/>
-<p><br/>4. <strong data-end="783" data-start="743">Tutorial3 中的 e-puck 機器人如何根據地面顏色改變行為？</strong></p>
+<br/><br/>4. <strong data-end="783" data-start="743">Tutorial3 中的 e-puck 機器人如何根據地面顏色改變行為？</strong>
 <p data-end="809" data-start="785">在 Webots 的 Tutorial 3 中：</p>
 <ul data-end="930" data-start="811">
 <li data-end="847" data-start="811">
@@ -466,7 +466,7 @@
 </div>
 </div>
 <hr data-end="1068" data-start="1065"/>
-<p><br/>5. <strong data-end="1122" data-start="1077">為什麼要對 Ground Sensor 的數值進行校正（calibration）？</strong></p>
+<br/><br/>5. <strong data-end="1122" data-start="1077">為什麼要對 Ground Sensor 的數值進行校正（calibration）？</strong>
 <p data-end="1129" data-start="1124">校正目的：</p>
 <ul data-end="1242" data-start="1131">
 <li data-end="1158" data-start="1131">
@@ -489,7 +489,7 @@
 </ul>
 <p data-end="1296" data-start="1244"><strong data-end="1250" data-start="1244">方法</strong>：可透過顯示感測器數值（<code data-end="1271" data-start="1262">print()</code>）實際量測並設定適當的閾值（threshold）。</p>
 <hr data-end="1301" data-start="1298"/>
-<p><br/>6. <strong data-end="1351" data-start="1310">如何設定 Ground Sensor 的 sampling period？</strong></p>
+<br/><br/>6. <strong data-end="1351" data-start="1310">如何設定 Ground Sensor 的 sampling period？</strong>
 <p data-end="1392" data-start="1353">可透過 <code data-end="1375" data-start="1357">enable(timestep)</code> 設定每幾毫秒更新一次感測器數值：</p>
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
@@ -503,7 +503,7 @@
 <div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>timestep = <span class="hljs-built_in">int</span>(robot.getBasicTimeStep()) ground_sensor.enable(timestep) <span class="hljs-comment"># 每個模擬 step 更新一次數值</span> </span></code></div>
 </div>
 <hr data-end="1504" data-start="1501"/>
-<p><br/>7. <strong data-end="1541" data-start="1513">e-puck 機器人可以偵測哪些顏色？如何判斷？</strong></p>
+<br/><br/>7. <strong data-end="1541" data-start="1513">e-puck 機器人可以偵測哪些顏色？如何判斷？</strong>
 <p data-end="1591" data-start="1543">Ground Sensors <strong data-end="1575" data-start="1558">無法辨別真實色彩（RGB）</strong>，只能量測「反射強度（亮度）」。</p>
 <ul data-end="1693" data-start="1593">
 <li data-end="1651" data-start="1593">
@@ -525,7 +525,7 @@
 </li>
 </ul>
 <hr data-end="1698" data-start="1695"/>
-<p><br/>8. <strong data-end="1743" data-start="1707">Tutorial3 如何讓 e-puck 在遇到黑線時做出反應？</strong></p>
+<br/><br/>8. <strong data-end="1743" data-start="1707">Tutorial3 如何讓 e-puck 在遇到黑線時做出反應？</strong>
 <p data-end="1752" data-start="1745">主要邏輯如下：</p>
 <ol data-end="1819" data-start="1754">
 <li data-end="1771" data-start="1754">
@@ -541,7 +541,7 @@
 <p data-end="1828" data-start="1821"></p>
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"></div>
 <hr data-end="2015" data-start="2012"/>
-<p><br/>9. <strong data-end="2048" data-start="2024">若地面顏色偵測判斷有誤，可能原因有哪些？</strong></p>
+<br/><br/>9. <strong data-end="2048" data-start="2024">若地面顏色偵測判斷有誤，可能原因有哪些？</strong>
 <p data-end="2057" data-start="2050">可能原因如下：</p>
 <ul data-end="2236" data-start="2059">
 <li data-end="2089" data-start="2059">
@@ -561,11 +561,11 @@
 </li>
 </ul>
 <h2><span>Tutorial4 相關提問:</span></h2>
-<p><br/>1. <strong data-end="81" data-start="62">如何讓機器人偵測牆壁或障礙物？</strong></p>
+<br/><br/>1. <strong data-end="81" data-start="62">如何讓機器人偵測牆壁或障礙物？</strong>
 <p data-end="192" data-start="83">可使用 Webots 中的 <strong data-end="122" data-start="97">距離感測器（DistanceSensor）</strong> 來達成。e-puck 機器人預設裝有 <strong data-end="157" data-start="142">8 個紅外線距離感測器</strong>（名為 <code data-end="172" data-start="161">ps0 ~ ps7</code>），可用來偵測牆壁、物體或障礙物的距離。</p>
 <p data-end="219" data-start="194">這些感測器通常分佈於機器人四周，涵蓋前、側、後方。</p>
 <hr data-end="224" data-start="221"/>
-<p><br/>2. <strong data-end="271" data-start="233">Webots 的距離感測器（DistanceSensor）如何運作？</strong></p>
+<br/><br/>2. <strong data-end="271" data-start="233">Webots 的距離感測器（DistanceSensor）如何運作？</strong>
 <ul data-end="359" data-start="273">
 <li data-end="292" data-start="273">
 <p data-end="292" data-start="275">模擬的是<strong data-end="291" data-start="279">紅外線反射感測器</strong>。</p>
@@ -581,7 +581,7 @@
 <p data-end="384" data-start="363">注意：不同物體、角度、顏色會影響感測精度。</p>
 </blockquote>
 <hr data-end="389" data-start="386"/>
-<p><br/>3. <strong data-end="433" data-start="398">如何在程式中啟用並讀取 DistanceSensor 的數值？</strong></p>
+<br/><br/>3. <strong data-end="433" data-start="398">如何在程式中啟用並讀取 DistanceSensor 的數值？</strong>
 <p data-end="449" data-start="435"><strong data-end="449" data-start="435">Python 範例：</strong></p>
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
@@ -593,7 +593,7 @@
 <div class="overflow-y-auto p-4" dir="ltr"></div>
 </div>
 <hr data-end="713" data-start="710"/>
-<p><br/>4. <strong data-end="757" data-start="722">Tutorial4 中，e-puck 機器人如何實作避障行為？</strong></p>
+<br/><br/>4. <strong data-end="757" data-start="722">Tutorial4 中，e-puck 機器人如何實作避障行為？</strong>
 <p data-end="764" data-start="759">基本策略：</p>
 <ol data-end="870" data-start="766">
 <li data-end="813" data-start="766">
@@ -620,7 +620,7 @@
 </div>
 </div>
 <hr data-end="1123" data-start="1120"/>
-<p><br/>5. <strong data-end="1155" data-start="1132">距離感測器數值的單位是什麼？如何轉換？</strong></p>
+<br/><br/>5. <strong data-end="1155" data-start="1132">距離感測器數值的單位是什麼？如何轉換？</strong>
 <ul data-end="1358" data-start="1157">
 <li data-end="1225" data-start="1157">
 <p data-end="1225" data-start="1159">Webots 的 <code data-end="1195" data-start="1168">DistanceSensor.getValue()</code> 回傳的是一個<strong data-end="1212" data-start="1202">模擬的原始值</strong>，<strong data-end="1224" data-start="1213">不是公尺或公分</strong>。</p>
@@ -633,7 +633,7 @@
 </li>
 </ul>
 <hr data-end="1363" data-start="1360"/>
-<p><br/>6. <strong data-end="1403" data-start="1372">如何設定距離感測器的 sampling period？</strong></p>
+<br/><br/>6. <strong data-end="1403" data-start="1372">如何設定距離感測器的 sampling period？</strong>
 <p data-end="1446" data-start="1405">與其他感測器相同，使用 <code data-end="1435" data-start="1417">enable(timestep)</code> 來設定感測更新頻率。</p>
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
 <div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
@@ -645,7 +645,7 @@
 <div class="overflow-y-auto p-4" dir="ltr">timestep = int(robot.getBasicTimeStep())<br/>ps0.enable(timestep)</div>
 </div>
 <hr data-end="1528" data-start="1525"/>
-<p><br/>7. <strong data-end="1569" data-start="1537">當機器人同時偵測到左、右兩側有障礙物時，應如何設計行為？</strong></p>
+<br/><br/>7. <strong data-end="1569" data-start="1537">當機器人同時偵測到左、右兩側有障礙物時，應如何設計行為？</strong>
 <p data-end="1576" data-start="1571">策略建議：</p>
 <ul data-end="1682" data-start="1578">
 <li data-end="1610" data-start="1578">
@@ -937,6 +937,236 @@
 <p data-end="2516" data-start="2493">可實作複合任務（巡線 + 避障 + 任務完成）</p>
 </li>
 </ul>
+<h2><span>Tutorial6 相關提問:</span></h2>
+<br/>一、<strong data-end="113" data-start="83">如何在 Webots 中使用攝影機（Camera）？</strong>
+<p data-end="166" data-start="115">Webots 提供的 <strong data-end="139" data-start="126">Camera 裝置</strong> 可模擬真實機器人的相機模組，允許擷取即時畫面，用於：</p>
+<ul data-end="228" data-start="168">
+<li data-end="183" data-start="168">
+<p data-end="183" data-start="170">顏色辨識（如偵測紅色物體）</p>
+</li>
+<li data-end="204" data-start="184">
+<p data-end="204" data-start="186">影像處理（圖形辨識、QR code）</p>
+</li>
+<li data-end="228" data-start="205">
+<p data-end="228" data-start="207">電腦視覺應用（如 OpenCV、物件追蹤）</p>
+</li>
+</ul>
+<hr data-end="233" data-start="230"/>
+<br/>二、<strong data-end="262" data-start="240">Camera 需要在程式中如何啟用？</strong>
+<p data-end="300" data-start="264">使用時需先在場景中的機器人裝上 Camera 裝置，接著在程式中啟用它。</p>
+<h3 data-end="316" data-start="302">Python 範例：</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">camera = robot.getDevice('camera')<br/>camera.enable(timestep) # 啟用攝影機並設定更新頻率</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"></div>
+</div>
+<hr data-end="411" data-start="408"/>
+<br/>三、<strong data-end="438" data-start="418">如何取得攝影機擷取到的影像資料？</strong>
+<p data-end="470" data-start="440">可使用下列方法取得像素資料（為 raw bytes 格式）：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">image = camera.getImage()<br/>width = camera.getWidth()<br/>height = camera.getHeight()</div>
+</div>
+</div>
+</div>
+<p data-end="593" data-start="567">你可以使用 Webots 的圖像處理 API，例如：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">r = Camera.imageGetRed(image, width, x, y)<br/>g = Camera.imageGetGreen(image, width, x, y)<br/>b = Camera.imageGetBlue(image, width, x, y)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span></span></code></div>
+</div>
+<hr data-end="778" data-start="775"/>
+<br/>四、<strong data-end="818" data-start="785">Tutorial6 中，機器人如何依據攝影機影像做出反應？</strong>
+<p data-end="837" data-start="820">在 Tutorial6，機器人會：</p>
+<ul data-end="902" data-start="839">
+<li data-end="867" data-start="839">
+<p data-end="867" data-start="841">使用攝影機偵測畫面中是否出現 <strong data-end="867" data-start="856">特定顏色的物體</strong></p>
+</li>
+<li data-end="902" data-start="868">
+<p data-end="902" data-start="870">透過簡單的像素分析，若偵測到某顏色，就執行動作（例如轉向、停止）</p>
+</li>
+</ul>
+<h3 data-end="910" data-start="904">例：</h3>
+<p data-end="935" data-start="911">如果畫面中心的像素呈紅色，則機器人轉向紅色物體。</p>
+<hr data-end="940" data-start="937"/>
+<br/>五、<strong data-end="969" data-start="947">Camera 裝置可以調整哪些參數？</strong>
+<p data-end="986" data-start="971">可在機器人設定中調整以下參數：</p>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="1341" data-start="988">
+<thead data-end="1039" data-start="988">
+<tr data-end="1039" data-start="988">
+<th data-col-size="sm" data-end="1005" data-start="988">參數名稱</th>
+<th data-col-size="sm" data-end="1039" data-start="1005">功能</th>
+</tr>
+</thead>
+<tbody data-end="1341" data-start="1098">
+<tr data-end="1149" data-start="1098">
+<td data-col-size="sm" data-end="1119" data-start="1098"><code data-end="1107" data-start="1100">width</code>, <code data-end="1117" data-start="1109">height</code></td>
+<td data-col-size="sm" data-end="1149" data-start="1119">攝影機解析度</td>
+</tr>
+<tr data-end="1201" data-start="1150">
+<td data-col-size="sm" data-end="1171" data-start="1150"><code data-end="1165" data-start="1152">fieldOfView</code></td>
+<td data-col-size="sm" data-end="1201" data-start="1171">視野角度（FOV）</td>
+</tr>
+<tr data-end="1244" data-start="1202">
+<td data-col-size="sm" data-end="1223" data-start="1202"><code data-end="1210" data-start="1204">near</code>, <code data-end="1217" data-start="1212">far</code></td>
+<td data-col-size="sm" data-end="1244" data-start="1223">近 / 遠裁剪面（剪除畫面以外區域）</td>
+</tr>
+<tr data-end="1294" data-start="1245">
+<td data-col-size="sm" data-end="1266" data-start="1245"><code data-end="1259" data-start="1247">motionBlur</code></td>
+<td data-col-size="sm" data-end="1294" data-start="1266">是否模擬動態模糊</td>
+</tr>
+<tr data-end="1341" data-start="1295">
+<td data-col-size="sm" data-end="1316" data-start="1295"><code data-end="1311" data-start="1297">antiAliasing</code></td>
+<td data-col-size="sm" data-end="1341" data-start="1316">抗鋸齒處理（改善畫質）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr data-end="1346" data-start="1343"/>
+<br/>六、<strong data-end="1375" data-start="1353">影像解析度的設定會對模擬有什麼影響？</strong>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="1492" data-start="1377">
+<thead data-end="1392" data-start="1377">
+<tr data-end="1392" data-start="1377">
+<th data-col-size="sm" data-end="1384" data-start="1377">解析度高</th>
+<th data-col-size="sm" data-end="1392" data-start="1384">解析度低</th>
+</tr>
+</thead>
+<tbody data-end="1492" data-start="1417">
+<tr data-end="1436" data-start="1417">
+<td data-col-size="sm" data-end="1428" data-start="1417">更清晰、細節更多</td>
+<td data-col-size="sm" data-end="1436" data-start="1428">畫質粗糙</td>
+</tr>
+<tr data-end="1458" data-start="1437">
+<td data-col-size="sm" data-end="1447" data-start="1437">影像處理更準確</td>
+<td data-col-size="sm" data-end="1458" data-start="1447">難以辨識小物體</td>
+</tr>
+<tr data-end="1492" data-start="1459">
+<td data-col-size="sm" data-end="1477" data-start="1459">會<strong data-end="1476" data-start="1462">增加計算量與模擬延遲</strong></td>
+<td data-col-size="sm" data-end="1492" data-start="1477">效能較佳，適合快速模擬</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p data-end="1524" data-start="1494">建議依照應用需求（例如只辨認顏色不需高解析）選擇合適解析度。</p>
+<hr data-end="1529" data-start="1526"/>
+<br/>七、<strong data-end="1555" data-start="1536">如何將攝影機影像儲存成圖片檔？</strong>
+<p data-end="1574" data-start="1557">可使用 Webots 提供的方法：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">camera.saveImage("image.png", quality)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<ul data-end="1662" data-start="1630">
+<li data-end="1662" data-start="1630">
+<p data-end="1662" data-start="1632"><code data-end="1641" data-start="1632">quality</code>：介於 1 到 100，代表影像壓縮品質。</p>
+</li>
+</ul>
+<p data-end="1669" data-start="1664">完整例子：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">camera.saveImage("snapshot.png", 100)</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>camera.saveImage(<span class="hljs-string">"snapshot.png"</span>, <span class="hljs-number">100</span>) </span></code></div>
+</div>
+<p data-end="1740" data-start="1723">也可結合 OpenCV 寫入圖片：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">import numpy as np<br/>import cv2<br/><br/>image = camera.getImage()<br/>width = camera.getWidth()<br/>height = camera.getHeight()<br/>img_array = np.frombuffer(image, np.uint8).reshape((height, width, 4))<br/>bgr_image = cv2.cvtColor(img_array, cv2.COLOR_BGRA2BGR)<br/>cv2.imwrite("snapshot_cv.png", bgr_image)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<hr data-end="2039" data-start="2036"/>
+<br/>八、<strong data-end="2070" data-start="2046">若攝影機影像顯示異常，可能的原因有哪些？</strong>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="2526" data-start="2072">
+<thead data-end="2144" data-start="2072">
+<tr data-end="2144" data-start="2072">
+<th data-col-size="sm" data-end="2098" data-start="2072">問題情形</th>
+<th data-col-size="sm" data-end="2144" data-start="2098">可能原因</th>
+</tr>
+</thead>
+<tbody data-end="2526" data-start="2226">
+<tr data-end="2293" data-start="2226">
+<td data-col-size="sm" data-end="2248" data-start="2226">畫面為黑（全 0 值）</td>
+<td data-col-size="sm" data-end="2293" data-start="2248">沒有 <code data-end="2263" data-start="2253">enable()</code> 或 timestep 設為 0</td>
+</tr>
+<tr data-end="2348" data-start="2294">
+<td data-col-size="sm" data-end="2314" data-start="2294">畫面畫質太差或閃爍</td>
+<td data-col-size="sm" data-end="2348" data-start="2314">解析度太低 / 頻率過低 / 模擬效能不足</td>
+</tr>
+<tr data-end="2409" data-start="2349">
+<td data-col-size="sm" data-end="2369" data-start="2349">顏色異常（如全綠）</td>
+<td data-col-size="sm" data-end="2409" data-start="2369">RGB 通道讀取錯誤，需確認 <code data-end="2401" data-start="2386">imageGetRed()</code> 等使用正確</td>
+</tr>
+<tr data-end="2470" data-start="2410">
+<td data-col-size="sm" data-end="2432" data-start="2410">儲存圖片為空檔</td>
+<td data-col-size="sm" data-end="2470" data-start="2432"><code data-end="2447" data-start="2434">saveImage()</code> 檔名路徑錯誤或沒寫入權限</td>
+</tr>
+<tr data-end="2526" data-start="2471">
+<td data-col-size="sm" data-end="2493" data-start="2471">調用 OpenCV 時轉換錯誤</td>
+<td data-col-size="sm" data-end="2526" data-start="2493">需先轉換成 NumPy 格式、注意通道順序與格式</td>
+</tr>
+</tbody>
+</table>
+<div class="sticky end-(--thread-content-margin) h-0 self-end select-none"></div>
+<div class="sticky end-(--thread-content-margin) h-0 self-end select-none">
+<div class="absolute end-0 flex items-end"></div>
+</div>
+</div>
+</div>
+<h2 data-end="2550" data-start="2533">✅ 總結：攝影機應用流程建議</h2>
+<ol data-end="2728" data-start="2552">
+<li data-end="2584" data-start="2552">
+<p data-end="2584" data-start="2555">在 <code data-end="2563" data-start="2557">.wbt</code> 中確認已為機器人加入 Camera 裝置</p>
+</li>
+<li data-end="2628" data-start="2585">
+<p data-end="2628" data-start="2588">在控制器中啟用 Camera：<code data-end="2628" data-start="2603">camera.enable(timestep)</code></p>
+</li>
+<li data-end="2659" data-start="2629">
+<p data-end="2659" data-start="2632">透過 <code data-end="2654" data-start="2635">camera.getImage()</code> 取得畫面</p>
+</li>
+<li data-end="2690" data-start="2660">
+<p data-end="2690" data-start="2663">使用 Webots API 或 OpenCV 處理影像</p>
+</li>
+<li data-end="2707" data-start="2691">
+<p data-end="2707" data-start="2694">設定合理的解析度與更新頻率</p>
+</li>
+<li data-end="2728" data-start="2708">
+<p data-end="2728" data-start="2711">可根據顏色或特徵設計機器人反應邏輯</p>
+</li>
+</ol>
 </div>
 </div>
 <h1>Midterm</h1>

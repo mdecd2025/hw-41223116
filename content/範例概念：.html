@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,15 +142,75 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3<br /><h1>Exam2</h1>
-<p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
-<p><span>檔案:</span><a href="./../downloads/55.zip">/downloads/55.zip</a></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 學員學號</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TssXBkLXd_I?si=7JvuAmgTn8x-tIkz" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9RHpuDeQ_0Y?si=sygh_puh0lG032bf" title="YouTube video player" width="560"></iframe></p>
-<p><a href="./../downloads/41223116_EXAM2.zip">/downloads/41223116_EXAM2.zip</a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7iI5vJ46jSY?si=IT_4qAmIo2pQPcMJ" title="YouTube video player" width="560"></iframe></p>
-<br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
+    <div id="tipue_search_content">解決方法： << <a href='解決方法：.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm<br /><h1>範例概念：</h1>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)<br/>if contours:<br/> largest = max(contours, key=cv2.contourArea)<br/> x, y, w, h = cv2.boundingRect(largest)<br/> cx = x + w // 2<br/> # 控制轉向<br/> if cx &lt; width // 3:<br/> turn_left()<br/> elif cx &gt; width * 2 // 3:<br/> turn_right()<br/> else:<br/> move_forward()</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+</div>
+<hr data-end="2239" data-start="2236"/>
+<br/>八、<strong data-end="2273" data-start="2246">若影像中有多個同色物件，程式如何選擇追蹤目標？</strong>
+<p data-end="2283" data-start="2275">可採用以下策略：</p>
+<ul data-end="2399" data-start="2285">
+<li data-end="2308" data-start="2285">
+<p data-end="2308" data-start="2287"><strong data-end="2298" data-start="2287">選最大面積輪廓</strong>：代表最近或最大物體</p>
+</li>
+<li data-end="2333" data-start="2309">
+<p data-end="2333" data-start="2311"><strong data-end="2323" data-start="2311">選擇中心最近物體</strong>：追蹤視野中間的目標</p>
+</li>
+<li data-end="2362" data-start="2334">
+<p data-end="2362" data-start="2336"><strong data-end="2351" data-start="2336">選擇指定座標位置的物體</strong>（如左側/右側/上下）</p>
+</li>
+<li data-end="2399" data-start="2363">
+<p data-end="2399" data-start="2365"><strong data-end="2399" data-start="2365">加入 ID 辨識（進階，可搭配 QR code 或其他特徵）</strong></p>
+</li>
+</ul>
+<hr data-end="2404" data-start="2401"/>
+<br/>九、<strong data-end="2446" data-start="2411">Tutorial7 能否應用於現實世界的機器人？需做哪些調整？</strong>
+<p data-end="2467" data-start="2448"><strong data-end="2467" data-start="2448">可以，但需進行以下調整與強化：</strong></p>
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="2719" data-start="2469">
+<thead data-end="2490" data-start="2469">
+<tr data-end="2490" data-start="2469">
+<th data-col-size="sm" data-end="2474" data-start="2469">項目</th>
+<th data-col-size="sm" data-end="2490" data-start="2474">模擬 → 現實需調整內容</th>
+</tr>
+</thead>
+<tbody data-end="2719" data-start="2525">
+<tr data-end="2553" data-start="2525">
+<td data-col-size="sm" data-end="2533" data-start="2525">感測器輸入</td>
+<td data-col-size="sm" data-end="2553" data-start="2533">攝影機解析度、光照變異大、雜訊多</td>
+</tr>
+<tr data-end="2582" data-start="2554">
+<td data-col-size="sm" data-end="2561" data-start="2554">計算效能</td>
+<td data-col-size="sm" data-end="2582" data-start="2561">現實中控制器效能受限，需簡化演算法</td>
+</tr>
+<tr data-end="2612" data-start="2583">
+<td data-col-size="sm" data-end="2591" data-start="2583">光源穩定性</td>
+<td data-col-size="sm" data-end="2612" data-start="2591">增加光學濾光片、白平衡、自適應曝光</td>
+</tr>
+<tr data-end="2656" data-start="2613">
+<td data-col-size="sm" data-end="2620" data-start="2613">色彩標準</td>
+<td data-col-size="sm" data-end="2656" data-start="2620">建立實際環境下的顏色校正表（Color Calibration）</td>
+</tr>
+<tr data-end="2689" data-start="2657">
+<td data-col-size="sm" data-end="2664" data-start="2657">馬達控制</td>
+<td data-col-size="sm" data-end="2689" data-start="2664">要控制實體馬達，需加入通訊協定與驅動器程式</td>
+</tr>
+<tr data-end="2719" data-start="2690">
+<td data-col-size="sm" data-end="2697" data-start="2690">驗證測試</td>
+<td data-col-size="sm" data-end="2719" data-start="2697">實測不同環境條件、多樣目標距離與角度</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote data-end="2761" data-start="2721"></blockquote>
+</div>
+</div>
+<br />解決方法： << <a href='解決方法：.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
         
     <!-- footer -->
       <div class="container">

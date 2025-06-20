@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,15 +142,20 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3<br /><h1>Exam2</h1>
-<p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
-<p><span>檔案:</span><a href="./../downloads/55.zip">/downloads/55.zip</a></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 學員學號</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TssXBkLXd_I?si=7JvuAmgTn8x-tIkz" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9RHpuDeQ_0Y?si=sygh_puh0lG032bf" title="YouTube video player" width="560"></iframe></p>
-<p><a href="./../downloads/41223116_EXAM2.zip">/downloads/41223116_EXAM2.zip</a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7iI5vJ46jSY?si=IT_4qAmIo2pQPcMJ" title="YouTube video player" width="560"></iframe></p>
-<br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
+    <div id="tipue_search_content">Tutorial7 相關提問: << <a href='Tutorial7 相關提問:.html'>Previous</a> <a href='步驟：.html'>Next</a> >> 步驟：<br /><h1>範例（使用 OpenCV）：</h1>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">import numpy as np<br/>import cv2<br/><br/>image = camera.getImage()<br/>width, height = camera.getWidth(), camera.getHeight()<br/>raw = np.frombuffer(image, np.uint8).reshape((height, width, 4)) # BGRA<br/>bgr = raw[:, :, :3]<br/>hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)<br/><br/># 設定紅色範圍<br/>lower_red = np.array([0, 120, 70])<br/>upper_red = np.array([10, 255, 255])<br/>mask = cv2.inRange(hsv, lower_red, upper_red)</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<hr data-end="746" data-start="743"/>
+<br/>三、<strong data-end="795" data-start="753">OpenCV 或其他影像處理函式庫在 Webots 控制器程式中的應用方式？</strong>
+<br />Tutorial7 相關提問: << <a href='Tutorial7 相關提問:.html'>Previous</a> <a href='步驟：.html'>Next</a> >> 步驟：</div>
         
     <!-- footer -->
       <div class="container">

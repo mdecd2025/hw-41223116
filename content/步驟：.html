@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,15 +142,72 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3<br /><h1>Exam2</h1>
-<p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
-<p><span>檔案:</span><a href="./../downloads/55.zip">/downloads/55.zip</a></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 學員學號</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TssXBkLXd_I?si=7JvuAmgTn8x-tIkz" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9RHpuDeQ_0Y?si=sygh_puh0lG032bf" title="YouTube video player" width="560"></iframe></p>
-<p><a href="./../downloads/41223116_EXAM2.zip">/downloads/41223116_EXAM2.zip</a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7iI5vJ46jSY?si=IT_4qAmIo2pQPcMJ" title="YouTube video player" width="560"></iframe></p>
-<br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
+    <div id="tipue_search_content">範例（使用 OpenCV）： << <a href='範例（使用 OpenCV）：.html'>Previous</a> <a href='解決方法：.html'>Next</a> >> 解決方法：<br /><h1>步驟：</h1>
+<ol data-end="1002" data-start="806">
+<li data-end="868" data-start="806">
+<p data-end="819" data-start="809">安裝 OpenCV：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">nginx</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr">pip install opencv-python numpy</div>
+</div>
+</li>
+<li data-end="954" data-start="870">
+<p data-end="898" data-start="873">在 Webots 的 Python 控制器中引用：</p>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">import cv2<br/>import numpy as np</div>
+</div>
+</li>
+<li data-end="1002" data-start="956">
+<p data-end="1002" data-start="959">將 <code data-end="980" data-start="961">Camera.getImage()</code> 的資料轉為 NumPy 陣列進行影像處理。</p>
+</li>
+</ol>
+<blockquote data-end="1042" data-start="1004">
+<p data-end="1042" data-start="1006">注意：若使用 C/C++ 則需額外連結 OpenCV 函式庫，較為複雜。</p>
+</blockquote>
+<hr data-end="1047" data-start="1044"/>
+<br/>四、<strong data-end="1078" data-start="1054">如何將影像中的顏色資訊轉換為機器人行為？</strong>
+<p data-end="1097" data-start="1080">依照物體的顏色與位置，轉換為動作：</p>
+<ul data-end="1132" data-start="1099">
+<li data-end="1132" data-start="1099">
+<p data-end="1132" data-start="1101">例如：若紅色物體偏左，轉左靠近；若偏右，轉右；若在中央，前進。</p>
+</li>
+</ul>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"># 偵測紅色區域重心<br/>M = cv2.moments(mask)<br/>if M['m00'] &gt; 0:<br/> cx = int(M['m10']/M['m00'])<br/> if cx &lt; width / 3:<br/> turn_left()<br/> elif cx &gt; width * 2 / 3:<br/> turn_right()<br/> else:<br/> move_forward()<br/>else:<br/> search()</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<hr data-end="1379" data-start="1376"/>
+<br/>五、<strong data-end="1409" data-start="1386">若要辨識多種顏色，程式需考慮哪些步驟？</strong>
+<ol data-end="1530" data-start="1411">
+<li data-end="1432" data-start="1411">
+<p data-end="1432" data-start="1414"><strong data-end="1432" data-start="1414">建立每個顏色的 HSV 範圍</strong></p>
+</li>
+<li data-end="1470" data-start="1433">
+<p data-end="1470" data-start="1436">使用 <code data-end="1454" data-start="1439">cv2.inRange()</code> 建立每種顏色的遮罩（mask）</p>
+</li>
+<li data-end="1504" data-start="1471">
+<p data-end="1504" data-start="1474">可逐一判斷或合併遮罩（bitwise operations）</p>
+</li>
+<li data-end="1530" data-start="1505">
+<p data-end="1530" data-start="1508">為每個顏色對應動作（例如紅色靠近，藍色避開）</p>
+</li>
+</ol>
+<hr data-end="1535" data-start="1532"/>
+<br/>六、<strong data-end="1566" data-start="1542">如何解決不同光源下顏色偵測的不穩定問題？</strong>
+<br />範例（使用 OpenCV）： << <a href='範例（使用 OpenCV）：.html'>Previous</a> <a href='解決方法：.html'>Next</a> >> 解決方法：</div>
         
     <!-- footer -->
       <div class="container">

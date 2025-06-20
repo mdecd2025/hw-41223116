@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,15 +142,41 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3<br /><h1>Exam2</h1>
-<p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
-<p><span>檔案:</span><a href="./../downloads/55.zip">/downloads/55.zip</a></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 學員學號</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TssXBkLXd_I?si=7JvuAmgTn8x-tIkz" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9RHpuDeQ_0Y?si=sygh_puh0lG032bf" title="YouTube video player" width="560"></iframe></p>
-<p><a href="./../downloads/41223116_EXAM2.zip">/downloads/41223116_EXAM2.zip</a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7iI5vJ46jSY?si=IT_4qAmIo2pQPcMJ" title="YouTube video player" width="560"></iframe></p>
-<br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
+    <div id="tipue_search_content">步驟： << <a href='步驟：.html'>Previous</a> <a href='範例概念：.html'>Next</a> >> 範例概念：<br /><h1>解決方法：</h1>
+<ul data-end="1734" data-start="1579">
+<li data-end="1608" data-start="1579">
+<p data-end="1608" data-start="1581">使用 <strong data-end="1596" data-start="1584">HSV 色彩空間</strong> 替代 RGB（更穩定）</p>
+</li>
+<li data-end="1651" data-start="1609">
+<p data-end="1651" data-start="1611">加入<strong data-end="1623" data-start="1613">自動曝光調整</strong>（如 Webots 的 <code data-end="1650" data-start="1635">setExposure()</code>）</p>
+</li>
+<li data-end="1690" data-start="1652">
+<p data-end="1690" data-start="1654">使用 <strong data-end="1666" data-start="1657">白平衡校正</strong> 或 <strong data-end="1690" data-start="1669">影像前處理（如 Gamma 調整）</strong></p>
+</li>
+<li data-end="1712" data-start="1691">
+<p data-end="1712" data-start="1693">增加 <strong data-end="1712" data-start="1696">色彩容忍區間（容錯範圍）</strong></p>
+</li>
+<li data-end="1734" data-start="1713">
+<p data-end="1734" data-start="1715">只偵測畫面中心或固定範圍，降低光源影響</p>
+</li>
+</ul>
+<hr data-end="1739" data-start="1736"/>
+<br/>七、<strong data-end="1773" data-start="1746">e-puck 機器人如何追蹤影像中的顏色物件？</strong>
+<ol data-end="1868" data-start="1775">
+<li data-end="1793" data-start="1775">
+<p data-end="1793" data-start="1778">偵測顏色並建立遮罩（mask）</p>
+</li>
+<li data-end="1825" data-start="1794">
+<p data-end="1825" data-start="1797">找出最大輪廓（<code data-end="1824" data-start="1804">cv2.findContours()</code>）</p>
+</li>
+<li data-end="1845" data-start="1826">
+<p data-end="1845" data-start="1829">取得該輪廓的<strong data-end="1845" data-start="1835">重心或邊界框</strong></p>
+</li>
+<li data-end="1868" data-start="1846">
+<p data-end="1868" data-start="1849">根據物體位置調整馬達轉速控制方向與移動</p>
+</li>
+</ol>
+<br />步驟： << <a href='步驟：.html'>Previous</a> <a href='範例概念：.html'>Next</a> >> 範例概念：</div>
         
     <!-- footer -->
       <div class="container">
