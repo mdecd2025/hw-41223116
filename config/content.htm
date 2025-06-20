@@ -203,8 +203,8 @@
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
 <p><br/><br/><br/><br/></p>
-<br/><br/><span>HW1</span><span>相關提問:</span>
-<h3>Webots 是什麼樣的軟體？它主要用途為何？</h3>
+<br/><br/><br/><span>HW1</span><span>相關提問:</span>
+<p>Webots 是什麼樣的軟體？它主要用途為何？</p>
 <p data-end="158" data-start="75">Webots 是一套由 <strong data-end="105" data-start="90">Cyberbotics</strong> 所開發的 <strong data-end="128" data-start="111">開源 3D 機器人模擬軟體</strong>，用於模擬機器人在真實世界中行為的虛擬環境。其主要用途包括：</p>
 <ul data-end="262" data-start="160">
 <li data-end="178" data-start="160">
@@ -729,6 +729,214 @@
 </tr>
 </tbody>
 </table>
+<p></p>
+<h2><span>Tutorial5 相關提問:</span></h2>
+<h3 data-end="124" data-start="92">如何讓機器人依照不同地面顏色或障礙物狀態做出不同反應？</h3>
+策略：
+<p data-end="192" data-start="134">結合地面感測器（Ground Sensor）與距離感測器（Distance Sensor）判斷環境，再做出對應反應。</p>
+範例邏輯：
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div>
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ground = gs1.getValue()<br/>left_obstacle = ps7.getValue()<br/>right_obstacle = ps0.getValue()<br/><br/>if ground &lt; 500: # 黑線<br/> stop()<br/>elif left_obstacle &gt; 80 or right_obstacle &gt; 80: # 有障礙物<br/> avoid_obstacle()<br/>else:<br/> move_forward()</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<hr data-end="446" data-start="443"/>
+<h3 data-end="481" data-start="448">二、Tutorial 5 中如何結合多種感測器進行複雜任務？</h3>
+<p data-end="501" data-start="483">Tutorial5 示範了如何利用：</p>
+<ul data-end="559" data-start="503">
+<li data-end="523" data-start="503">
+<p data-end="523" data-start="505"><strong data-end="514" data-start="505">地面感測器</strong>（循線、辨識區域）</p>
+</li>
+<li data-end="539" data-start="524">
+<p data-end="539" data-start="526"><strong data-end="535" data-start="526">距離感測器</strong>（避障）</p>
+</li>
+<li data-end="559" data-start="540">
+<p data-end="559" data-start="542"><strong data-end="551" data-start="542">有限狀態機</strong>（控制任務流程）</p>
+</li>
+</ul>
+<h3 data-end="568" data-start="561">應用：</h3>
+<p data-end="606" data-start="569">機器人能同時<strong data-end="605" data-start="575">巡線 → 遇障 → 閃避 → 回歸巡線 → 完成任務</strong>。</p>
+<hr data-end="611" data-start="608"/>
+<h3 data-end="633" data-start="613">三、如何設計機器人巡線並同時避障？</h3>
+<p data-end="676" data-start="635">這是典型的<strong data-end="651" data-start="640">多任務整合問題</strong>，可採用<strong data-end="675" data-start="655">優先權決策或狀態機（FSM）實作</strong>。</p>
+<h3 data-end="687" data-start="678">常見策略：</h3>
+<ol data-end="779" data-start="688">
+<li data-end="715" data-start="688">
+<p data-end="715" data-start="691"><strong data-end="705" data-start="691">高優先權任務優先處理</strong>（如避障 &gt; 巡線）</p>
+</li>
+<li data-end="738" data-start="716">
+<p data-end="738" data-start="719">巡線：根據 <code data-end="730" data-start="725">gs1</code> 為中心調整方向</p>
+</li>
+<li data-end="779" data-start="739">
+<p data-end="779" data-start="742">若 <code data-end="753" data-start="744">ps0~ps2</code> 或 <code data-end="765" data-start="756">ps5~ps7</code> 偵測到障礙物則進入避障模式</p>
+</li>
+</ol>
+<hr data-end="784" data-start="781"/>
+<h3 data-end="812" data-start="786">四、若多種感測器回報衝突訊息，程式該如何決策？</h3>
+<p data-end="835" data-start="814">建議使用 <strong data-end="834" data-start="819">優先權架構或狀態機處理</strong>：</p>
+<ul data-end="898" data-start="837">
+<li data-end="865" data-start="837">
+<p data-end="865" data-start="839">避障為高優先 → 地面為中優先 → 其他行為為低優先</p>
+</li>
+<li data-end="898" data-start="866">
+<p data-end="898" data-start="868">也可使用 <strong data-end="888" data-start="873">感測器融合機制加權平均</strong> 或 <strong data-end="898" data-start="891">決策表</strong></p>
+</li>
+</ul>
+<h3 data-end="909" data-start="900">範例邏輯：</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">if obstacle_detected:<br/> enter_avoid_mode()<br/>elif line_detected:<br/> follow_line()<br/>else:<br/> search_line()</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+</div>
+<hr data-end="1035" data-start="1032"/>
+<h3 data-end="1073" data-start="1037">五、在 Tutorial5 裡，機器人如何完成任務流程的狀態切換？</h3>
+<p data-end="1095" data-start="1075">透過**有限狀態機（FSM）**來處理：</p>
+<ul data-end="1152" data-start="1097">
+<li data-end="1136" data-start="1097">
+<p data-end="1136" data-start="1099">定義狀態（如：IDLE, FOLLOW_LINE, AVOID, END）</p>
+</li>
+<li data-end="1152" data-start="1137">
+<p data-end="1152" data-start="1139">根據感測器輸入決定狀態轉移</p>
+</li>
+</ul>
+範例結構：
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">python</div>
+<div class="sticky top-9">
+<div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">state = "FOLLOW_LINE"<br/><br/>if state == "FOLLOW_LINE":<br/> if obstacle_detected:<br/> state = "AVOID"<br/> else:<br/> follow_line()<br/>elif state == "AVOID":<br/> if obstacle_cleared:<br/> state = "FOLLOW_LINE"<br/> else:<br/> avoid_obstacle()</div>
+<div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr"></div>
+</div>
+<hr data-end="1427" data-start="1424"/>
+<h3 data-end="1453" data-start="1429">六、如何在程式中設計有限狀態機（FSM）？</h3>
+設計步驟：
+<ol data-end="1596" data-start="1466">
+<li data-end="1504" data-start="1466">
+<p data-end="1504" data-start="1469"><strong data-end="1478" data-start="1469">定義狀態集</strong>：列出所有行為狀態（如：IDLE、巡線、避障、完成）</p>
+</li>
+<li data-end="1534" data-start="1505">
+<p data-end="1534" data-start="1508"><strong data-end="1518" data-start="1508">建立轉移邏輯</strong>：設定感測條件與狀態間的轉移關係</p>
+</li>
+<li data-end="1576" data-start="1535">
+<p data-end="1576" data-start="1538"><strong data-end="1549" data-start="1538">用變數管理狀態</strong>：例如 <code data-end="1576" data-start="1553">state = "LINE_FOLLOW"</code></p>
+</li>
+<li data-end="1596" data-start="1577">
+<p data-end="1596" data-start="1580"><strong data-end="1596" data-start="1580">在主迴圈中處理行為與轉移</strong></p>
+</li>
+</ol>
+<hr data-end="1601" data-start="1598"/>
+<h3 data-end="1634" data-start="1603">七、Tutorial5 的挑戰題目有哪些？如何著手解決？</h3>
+常見挑戰：
+<ol data-end="1725" data-start="1646">
+<li data-end="1666" data-start="1646">
+<p data-end="1666" data-start="1649"><strong data-end="1666" data-start="1649">在黑線中穿越障礙並返回路徑</strong></p>
+</li>
+<li data-end="1690" data-start="1667">
+<p data-end="1690" data-start="1670"><strong data-end="1690" data-start="1670">抵達指定顏色區域後停下或發出訊號</strong></p>
+</li>
+<li data-end="1725" data-start="1691">
+<p data-end="1725" data-start="1694"><strong data-end="1725" data-start="1694">通過不同顏色地面改變行為（例如紅色區轉彎、藍色區掉頭）</strong></p>
+</li>
+</ol>
+解法建議：
+<ul data-end="1788" data-start="1737">
+<li data-end="1752" data-start="1737">
+<p data-end="1752" data-start="1739">使用地面感測器判斷顏色區域</p>
+</li>
+<li data-end="1766" data-start="1753">
+<p data-end="1766" data-start="1755">使用狀態機進行行為轉換</p>
+</li>
+<li data-end="1788" data-start="1767">
+<p data-end="1788" data-start="1769">加入路徑紀錄或尋徑策略協助回到原始路線</p>
+</li>
+</ul>
+<hr data-end="1793" data-start="1790"/>
+<h3 data-end="1830" data-start="1795">八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？</h3>
+必要功能：
+<ul data-end="1954" data-start="1843">
+<li data-end="1857" data-start="1843">
+<p data-end="1857" data-start="1845"><strong data-end="1857" data-start="1845">路線循跡（巡線）</strong></p>
+</li>
+<li data-end="1872" data-start="1858">
+<p data-end="1872" data-start="1860"><strong data-end="1872" data-start="1860">障礙物偵測與避障</strong></p>
+</li>
+<li data-end="1888" data-start="1873">
+<p data-end="1888" data-start="1875"><strong data-end="1888" data-start="1875">區域辨識與轉向控制</strong></p>
+</li>
+<li data-end="1904" data-start="1889">
+<p data-end="1904" data-start="1891"><strong data-end="1904" data-start="1891">狀態管理（FSM）</strong></p>
+</li>
+<li data-end="1928" data-start="1905">
+<p data-end="1928" data-start="1907"><strong data-end="1928" data-start="1907">導航記憶（若需回到原點或重覆路徑）</strong></p>
+</li>
+<li data-end="1954" data-start="1929">
+<p data-end="1954" data-start="1931">（進階）<strong data-end="1954" data-start="1935">路線地圖構建、SLAM、里程計</strong></p>
+</li>
+</ul>
+<hr data-end="1959" data-start="1956"/>
+<h3 data-end="2012" data-start="1961">九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用</h3>
+意義：
+<p data-end="2093" data-start="2023"><strong data-end="2064" data-start="2023">感測器資料融合（Sensor Fusion）<strong data-end="2057" data-start="2047">指的是將來自</strong>不同感測器</strong>的輸入資訊整合，用以做出更<strong data-end="2092" data-start="2077">穩定、準確、完整的判斷</strong>。</p>
+在 Tutorial3~5 中的應用：
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="2453" data-start="2120">
+<thead data-end="2189" data-start="2120">
+<tr data-end="2189" data-start="2120">
+<th data-col-size="sm" data-end="2134" data-start="2120">感測器</th>
+<th data-col-size="sm" data-end="2156" data-start="2134">功能</th>
+<th data-col-size="sm" data-end="2189" data-start="2156">資料融合應用</th>
+</tr>
+</thead>
+<tbody data-end="2453" data-start="2271">
+<tr data-end="2335" data-start="2271">
+<td data-col-size="sm" data-end="2288" data-start="2271">Ground Sensor</td>
+<td data-col-size="sm" data-end="2304" data-start="2288">判斷地面顏色/亮度</td>
+<td data-col-size="sm" data-end="2335" data-start="2304">區域偵測、巡線</td>
+</tr>
+<tr data-end="2397" data-start="2336">
+<td data-col-size="sm" data-end="2353" data-start="2336">DistanceSensor</td>
+<td data-col-size="sm" data-end="2370" data-start="2353">偵測障礙物距離</td>
+<td data-col-size="sm" data-end="2397" data-start="2370">避障、判斷前方通行性</td>
+</tr>
+<tr data-end="2453" data-start="2398">
+<td data-col-size="sm" data-end="2412" data-start="2398">狀態機</td>
+<td data-col-size="sm" data-end="2428" data-start="2412">管理多重任務流程</td>
+<td data-col-size="sm" data-end="2453" data-start="2428">整合感測資訊 → 決策狀態切換</td>
+</tr>
+</tbody>
+</table>
+<div class="sticky end-(--thread-content-margin) h-0 self-end select-none">
+<div class="absolute end-0 flex items-end"></div>
+<div class="absolute end-0 flex items-end">優點：</div>
+</div>
+</div>
+</div>
+<ul data-end="2516" data-start="2463">
+<li data-end="2474" data-start="2463">
+<p data-end="2474" data-start="2465">減少單一感測器誤判</p>
+</li>
+<li data-end="2490" data-start="2475">
+<p data-end="2490" data-start="2477">提升環境理解與機器人自主性</p>
+</li>
+<li data-end="2516" data-start="2491">
+<p data-end="2516" data-start="2493">可實作複合任務（巡線 + 避障 + 任務完成）</p>
+</li>
+</ul>
 </div>
 </div>
 <h1>Midterm</h1>

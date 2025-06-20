@@ -142,50 +142,58 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Webots 支援哪些主流程控制語言？各有何優缺點？ << <a href='Webots 支援哪些主流程控制語言？各有何優缺點？.html'>Previous</a> <a href='Tutorial3 相關提問:.html'>Next</a> >> Tutorial3 相關提問:<br /><h1>請說明如何使用 Webots 的 Console 與 Debug 工具協助程式錯誤排除。</h1>
-<ul data-end="2146" data-start="1784">
-<li data-end="1916" data-start="1784">
-<p data-end="1807" data-start="1786"><strong data-end="1797" data-start="1786">Console</strong>（控制器輸出視窗）：</p>
-<ul data-end="1916" data-start="1810">
-<li data-end="1845" data-start="1810">
-<p data-end="1845" data-start="1812">顯示控制器<span> </span><code data-end="1827" data-start="1818">print()</code><span> </span>或<span> </span><code data-end="1840" data-start="1830">printf()</code><span> </span>的輸出。</p>
+    <div id="tipue_search_content">八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？ << <a href='八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm<br /><h1>九、綜合 Tutorial3~5，請說明感測器資料融合（Sensor Fusion）的意義與應用</h1>
+意義：
+<p data-end="2093" data-start="2023"><strong data-end="2064" data-start="2023">感測器資料融合（Sensor Fusion）<strong data-end="2057" data-start="2047">指的是將來自</strong>不同感測器</strong>的輸入資訊整合，用以做出更<strong data-end="2092" data-start="2077">穩定、準確、完整的判斷</strong>。</p>
+在 Tutorial3~5 中的應用：
+<div class="_tableContainer_16hzy_1">
+<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+<table class="w-fit min-w-(--thread-content-width)" data-end="2453" data-start="2120">
+<thead data-end="2189" data-start="2120">
+<tr data-end="2189" data-start="2120">
+<th data-col-size="sm" data-end="2134" data-start="2120">感測器</th>
+<th data-col-size="sm" data-end="2156" data-start="2134">功能</th>
+<th data-col-size="sm" data-end="2189" data-start="2156">資料融合應用</th>
+</tr>
+</thead>
+<tbody data-end="2453" data-start="2271">
+<tr data-end="2335" data-start="2271">
+<td data-col-size="sm" data-end="2288" data-start="2271">Ground Sensor</td>
+<td data-col-size="sm" data-end="2304" data-start="2288">判斷地面顏色/亮度</td>
+<td data-col-size="sm" data-end="2335" data-start="2304">區域偵測、巡線</td>
+</tr>
+<tr data-end="2397" data-start="2336">
+<td data-col-size="sm" data-end="2353" data-start="2336">DistanceSensor</td>
+<td data-col-size="sm" data-end="2370" data-start="2353">偵測障礙物距離</td>
+<td data-col-size="sm" data-end="2397" data-start="2370">避障、判斷前方通行性</td>
+</tr>
+<tr data-end="2453" data-start="2398">
+<td data-col-size="sm" data-end="2412" data-start="2398">狀態機</td>
+<td data-col-size="sm" data-end="2428" data-start="2412">管理多重任務流程</td>
+<td data-col-size="sm" data-end="2453" data-start="2428">整合感測資訊 → 決策狀態切換</td>
+</tr>
+</tbody>
+</table>
+<div class="sticky end-(--thread-content-margin) h-0 self-end select-none">
+<div class="absolute end-0 flex items-end"></div>
+<div class="absolute end-0 flex items-end">優點：</div>
+</div>
+</div>
+</div>
+<ul data-end="2516" data-start="2463">
+<li data-end="2474" data-start="2463">
+<p data-end="2474" data-start="2465">減少單一感測器誤判</p>
 </li>
-<li data-end="1876" data-start="1848">
-<p data-end="1876" data-start="1850">顯示錯誤訊息、例外（Exception）與除錯訊息。</p>
+<li data-end="2490" data-start="2475">
+<p data-end="2490" data-start="2477">提升環境理解與機器人自主性</p>
 </li>
-<li data-end="1913" data-start="1879">
-<p data-end="1913" data-start="1881">可使用<span> </span><code data-end="1902" data-start="1885">robot.getName()</code><span> </span>等方法輸出除錯資訊。</p>
+<li data-end="2516" data-start="2491">
+<p data-end="2516" data-start="2493">可實作複合任務（巡線 + 避障 + 任務完成）</p>
 </li>
 </ul>
-</li>
-<li data-end="2079" data-start="1917">
-<p data-end="1948" data-start="1919"><strong data-end="1931" data-start="1919">Debug 工具</strong>（在 IDE 或外部開發工具中）：</p>
-<ul data-end="2079" data-start="1951">
-<li data-end="1996" data-start="1951">
-<p data-end="1996" data-start="1953">可將控制器連結至外部 IDE（如 Visual Studio Code）來設斷點除錯。</p>
-</li>
-<li data-end="2021" data-start="1999">
-<p data-end="2021" data-start="2001">C/C++ 控制器可透過 gdb 除錯。</p>
-</li>
-<li data-end="2079" data-start="2024">
-<p data-end="2079" data-start="2026">Python 控制器可加入<span> </span><code data-end="2069" data-start="2040">import pdb; pdb.set_trace()</code><span> </span>進入互動除錯模式。</p>
-</li>
-</ul>
-</li>
-<li data-end="2146" data-start="2081"><br/><strong data-end="2102" data-start="2083">Supervisor 支援除錯</strong>：
-<ul data-end="2146" data-start="2106">
-<li data-end="2125" data-start="2106">
-<p data-end="2125" data-start="2108">可檢查世界中的物件狀態與位置變化。</p>
-</li>
-<li data-end="2146" data-start="2128">
-<p data-end="2146" data-start="2130">可設定模擬暫停、單步執行等功能。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong></strong></p>
-<p><br/><br/></p>
-<br />Webots 支援哪些主流程控制語言？各有何優缺點？ << <a href='Webots 支援哪些主流程控制語言？各有何優缺點？.html'>Previous</a> <a href='Tutorial3 相關提問:.html'>Next</a> >> Tutorial3 相關提問:</div>
+</div>
+</div>
+<br />八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？ << <a href='八、若要讓機器人自主完成一個完整路徑的巡邏任務，應加入哪些功能？.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
         
     <!-- footer -->
       <div class="container">
